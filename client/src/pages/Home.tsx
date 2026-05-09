@@ -610,9 +610,9 @@ export default function Home() {
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
-                130 FIVE-STAR REVIEWS.
+                130+ GOOGLE REVIEWS.
                 <br />
-                <span style={{ color: "#CC2229" }}>4.9 STARS ON GOOGLE.</span>
+                <span style={{ color: "#CC2229" }}>4.9 STARS OVERALL.</span>
               </h2>
             </div>
           </FadeIn>
