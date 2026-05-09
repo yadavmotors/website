@@ -23,7 +23,7 @@ export default function Footer() {
             <img
               src="/manus-storage/yadav-logo_4d5e32a9.png"
               alt="Yadav Motors"
-              className="h-14 w-auto mb-4"
+              className="h-28 w-auto mb-4"
             />
             <p className="text-white/70 text-sm leading-relaxed">
               Werribee's trusted mechanic. Honest advice, transparent pricing, and quality workmanship you can rely on.

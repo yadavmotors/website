@@ -47,7 +47,7 @@ export default function Navbar() {
             <img
               src="/manus-storage/yadav-logo_4d5e32a9.png"
               alt="Yadav Motors"
-              className="h-10 lg:h-12 w-auto"
+              className="h-20 lg:h-24 w-auto"
             />
           </Link>
 
