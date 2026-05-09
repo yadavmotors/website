@@ -282,7 +282,7 @@ export default function Home() {
                 className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
-                Meet Your Guide
+                Meet the Owner
               </p>
               <h2
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy mb-6"
@@ -305,6 +305,7 @@ export default function Home() {
                   "Diploma of Automotive Technology",
                   "Cert IV Automotive Mechanical",
                   "Cert III Automotive Mechanical",
+                  "Certificate II in Automotive Air Conditioning Technology",
                   "EV & Hybrid Servicing Certified",
                   "Advanced Scan-Tool Diagnostics",
                   "All Makes & Models Serviced",
