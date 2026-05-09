@@ -10,7 +10,7 @@ import { Link } from "wouter";
 import { Phone, MapPin, Star, CheckCircle, AlertTriangle, ChevronDown, Wrench, Car, Shield, Clock, Users, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { MapView } from "@/components/Map";
+
 
 // Asset URLs
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-hero-YWBsshsFWNgTCVje28g9o5.webp";
@@ -89,25 +89,6 @@ const reviews = [
 ];
 
 export default function Home() {
-  const [mapReady, setMapReady] = useState(false);
-  const mapRef = useRef<google.maps.Map | null>(null);
-
-  const handleMapReady = (map: google.maps.Map) => {
-    mapRef.current = map;
-    setMapReady(true);
-    // Centre on Yadav Motors location
-    const location = { lat: -37.9003, lng: 144.6577 };
-    map.setCenter(location);
-    map.setZoom(16);
-    new google.maps.Marker({
-      position: location,
-      map,
-      title: "Yadav Motors — 11/67-71 Russell St, Werribee",
-      icon: {
-        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-      },
-    });
-  };
 
   return (
     <div className="min-h-screen">
@@ -141,11 +122,11 @@ export default function Home() {
               className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
               style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.02em" }}
             >
-              NEW TO WERRIBEE?
+              WERRIBEE'S TRUSTED
               <br />
-              <span style={{ color: "#CC2229" }}>FIND A MECHANIC</span>
+              <span style={{ color: "#CC2229" }}>LOCAL MECHANIC</span>
               <br />
-              YOU CAN TRUST.
+              YOU CAN RELY ON.
             </h1>
 
             <p
@@ -826,10 +807,16 @@ export default function Home() {
 
             {/* Map */}
             <FadeIn delay={150} className="lg:col-span-3">
-              <div className="rounded-xl overflow-hidden shadow-md border border-gray-200" style={{ height: "420px" }}>
-                <MapView
-                  onMapReady={handleMapReady}
-                  className="w-full h-full"
+              <div className="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.1818135694625!2d144.65992743717925!3d-37.912727932023145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad68587e51866e9%3A0x79d40193dd91b0eb!2sYADAV%20MOTORS%20T%2FA%20RUSSELL%20STREET%20AUTOMOTIVE!5e0!3m2!1sen!2sau!4v1778301301727!5m2!1sen!2sau"
+                  width="100%"
+                  height="420"
+                  style={{ border: "none", display: "block" }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Yadav Motors Location"
                 />
               </div>
             </FadeIn>
