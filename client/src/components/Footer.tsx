@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Logo & Tagline */}
           <div className="lg:col-span-1">
             <img
-              src="/manus-storage/yadav-logo_4d5e32a9.png"
+              src="/manus-storage/Screenshot2026-05-09145530_3b4930b7.png"
               alt="Yadav Motors"
               className="h-28 w-auto mb-4"
             />

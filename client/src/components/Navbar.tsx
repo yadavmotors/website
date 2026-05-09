@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <img
-              src="/manus-storage/yadav-logo_4d5e32a9.png"
+              src="/manus-storage/Screenshot2026-05-09145530_3b4930b7.png"
               alt="Yadav Motors"
               className="h-20 lg:h-24 w-auto"
             />
