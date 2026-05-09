@@ -58,7 +58,7 @@ const services = [
   { icon: <Car size={28} />, title: "Tyres & Wheel Alignment", desc: "New tyres, EV tyres, wheel alignment, and balancing for all makes and models." },
   { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, air conditioning, and electrical repairs." },
   { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics and engine repairs carried out to manufacturer standards." },
-  { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service." },
+  { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
 ];
 
 const reviews = [
