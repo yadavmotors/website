@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 
 // Asset URLs
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-hero-YWBsshsFWNgTCVje28g9o5.webp";
-const MECHANIC_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-mechanic-trust-ce4Wjc7Yjn25BgtjNynhVZ.webp";
+const MECHANIC_IMG = "/manus-storage/494356353_1238126704987336_4123534805388708664_n_e6929acc.jpg";
 const DIAGNOSTICS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-diagnostics-GWZWBGuPpfpVpHmet5Fb5o.webp";
 const SUBURB_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-werribee-suburb-Br4Adqdyum6gssNdDFED8j.webp";
 
