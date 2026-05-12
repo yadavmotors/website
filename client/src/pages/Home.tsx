@@ -10,6 +10,8 @@ import { Link } from "wouter";
 import { Phone, MapPin, Star, CheckCircle, AlertTriangle, ChevronDown, Wrench, Car, Shield, Clock, Users, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { trpc } from "@/lib/trpc";
+import type { Review } from "@shared/types";
 
 
 // Asset URLs
@@ -61,34 +63,19 @@ const services = [
   { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
 ];
 
-const reviews = [
-  {
-    name: "Sarah M.",
-    rating: 5,
-    text: "Rama is incredibly honest and transparent. He explained everything clearly before doing any work and the price matched the quote exactly. I won't go anywhere else.",
-    suburb: "Werribee",
-  },
-  {
-    name: "James T.",
-    rating: 5,
-    text: "Moved to Werribee recently and was nervous about finding a good mechanic. Found Yadav Motors through Google and couldn't be happier. Fast, professional, and no hidden costs.",
-    suburb: "Hoppers Crossing",
-  },
-  {
-    name: "Priya K.",
-    rating: 5,
-    text: "Took my car to a dealership first and they quoted me a fortune. Rama fixed the same issue for a fraction of the price and it's been running perfectly ever since.",
-    suburb: "Wyndham Vale",
-  },
-  {
-    name: "Michael D.",
-    rating: 5,
-    text: "I run a small fleet of vans and Yadav Motors looks after all of them. Reliable, quality work every time. Highly recommend for any business with vehicles.",
-    suburb: "Point Cook",
-  },
-];
-
 export default function Home() {
+  const { data: apiReviews = [] } = trpc.reviews.list.useQuery();
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const reviews = apiReviews.length > 0 ? apiReviews : [];
+
+  // Rotate reviews every 6 seconds
+  useEffect(() => {
+    if (reviews.length === 0) return;
+    const interval = setInterval(() => {
+      setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [reviews.length]);
 
   return (
     <div className="min-h-screen">
@@ -615,27 +602,35 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {reviews.map((review, i) => (
-              <FadeIn key={review.name} delay={i * 100}>
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <div className="flex items-center gap-1 mb-3">
-                    {Array.from({ length: review.rating }).map((_, j) => (
-                      <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 leading-relaxed mb-4 text-sm italic">"{review.text}"</p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-semibold text-brand-navy text-sm">{review.name}</span>
-                    <span className="text-gray-400 text-xs flex items-center gap-1">
-                      <MapPin size={12} />
-                      {review.suburb}
-                    </span>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          {reviews.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Show 2 reviews at a time, rotating */}
+              {[currentReviewIndex, (currentReviewIndex + 1) % reviews.length].map((idx) => {
+                const review = reviews[idx];
+                return (
+                  <FadeIn key={`${review.id}-${idx}`}>
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                      <div className="flex items-center gap-1 mb-3">
+                        {Array.from({ length: review.rating }).map((_, j) => (
+                          <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
+                        ))}
+                      </div>
+                      <p className="text-gray-700 leading-relaxed mb-4 text-sm italic">"{review.text}"</p>
+                      <div className="flex items-center justify-between">
+                        <span className="font-semibold text-brand-navy text-sm">{review.name}</span>
+                        <span className="text-gray-400 text-xs flex items-center gap-1">
+                          <MapPin size={12} />
+                          {review.suburb}
+                        </span>
+                      </div>
+                    </div>
+                  </FadeIn>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-center text-gray-500 py-8">Loading reviews...</div>
+          )}
 
           <FadeIn delay={400}>
             <div className="text-center mt-8">

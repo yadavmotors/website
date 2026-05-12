@@ -142,7 +142,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>© {new Date().getFullYear()} Yadav Motors. All rights reserved.</span>
-          <span>11/67-71 Russell St, Werribee VIC 3030 · ABN: Yadav Motors</span>
+          <span>11/67-71 Russell St, Werribee VIC 3030</span>
         </div>
       </div>
     </footer>
