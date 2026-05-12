@@ -549,7 +549,6 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Breakdowns at the worst possible time",
                     "Reduced safety and reliability on the road",
                     "Increased fuel and repair costs over time",
                     "Preventable engine or component damage",
@@ -576,7 +575,6 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Fewer unexpected breakdowns — drive with confidence",
                     "A safe, reliable vehicle for you and your family",
                     "Better long-term performance and fuel efficiency",
                     "Preventative maintenance that saves money over time",
