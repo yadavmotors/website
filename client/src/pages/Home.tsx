@@ -53,7 +53,7 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 const services = [
   { icon: <Car size={28} />, title: "Log Book Servicing", desc: "Keep your new car warranty intact with manufacturer-compliant log book services." },
   { icon: <Wrench size={28} />, title: "Brakes & Suspension", desc: "Full brake inspections, pad replacements, and suspension repairs for a safe, smooth ride." },
-  { icon: <Shield size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, and fluid changes." },
+  { icon: <Wrench size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, fluid changes, and clutch replacement." },
   { icon: <CheckCircle size={28} />, title: "Roadworthy Certificates", desc: "Licensed roadworthy inspections for vehicle transfers and registration." },
   { icon: <Car size={28} />, title: "Tyres & Wheel Alignment", desc: "New tyres, EV tyres, wheel alignment, and balancing for all makes and models." },
   { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, air conditioning, and electrical repairs." },
@@ -464,7 +464,7 @@ export default function Home() {
                 ALL MAKES & MODELS.
               </h2>
               <p className="text-gray-600 mt-4 max-w-xl mx-auto">
-                From a Yaris to a Renault Master, from a 1970s classic to a 2024 hybrid — if it has wheels, we can service it.
+                From a Yaris to a Renault Master, from a 1970s classic to new release hybrid and electric — if it has wheels, we can service it.
               </p>
             </div>
           </FadeIn>
