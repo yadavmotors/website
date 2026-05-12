@@ -37,6 +37,14 @@ export default function BookOnline() {
             Select your service, choose a time that suits you, and we'll take care of the rest. No guesswork, no hidden costs.
           </p>
 
+          {/* Quick info about booking process */}
+          <div className="mt-4 bg-white/10 border border-white/20 rounded-lg p-4 max-w-xl">
+            <p className="text-white text-sm font-semibold mb-2">ℹ️ How Our Booking Works:</p>
+            <p className="text-white/80 text-sm leading-relaxed">
+              This online form is a <strong>booking request</strong>, not a confirmed appointment. Once you submit, we'll review your request and send you a <strong>text message confirmation</strong> from Yadav Motors with your confirmed time. That text is your official confirmation.
+            </p>
+          </div>
+
           {/* Quick contact strip */}
           <div className="flex flex-wrap gap-6 mt-6 text-sm text-white/70">
             <a href="tel:0430869699" className="flex items-center gap-2 hover:text-white transition-colors">
@@ -68,8 +76,33 @@ export default function BookOnline() {
             />
           </div>
 
+          {/* Important note about booking process */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8 max-w-2xl mx-auto">
+            <h3 className="text-brand-navy font-bold text-lg mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              📱 Booking Confirmation Process
+            </h3>
+            <div className="space-y-3 text-sm text-gray-700">
+              <div className="flex gap-3">
+                <span className="font-bold text-brand-red min-w-6">1.</span>
+                <p><strong>Submit your booking request</strong> using the form above with your preferred date and time.</p>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-brand-red min-w-6">2.</span>
+                <p><strong>We review your request</strong> and check availability at our workshop.</p>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-brand-red min-w-6">3.</span>
+                <p><strong>You'll receive a text message</strong> from Yadav Motors confirming your appointment time. This is your official confirmation.</p>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-brand-red min-w-6">4.</span>
+                <p><strong>Bring your car</strong> at the confirmed time. If you need to reschedule, just call us on <a href="tel:0430869699" className="text-brand-navy font-semibold hover:text-brand-red">0430 869 699</a>.</p>
+              </div>
+            </div>
+          </div>
+
           {/* Fallback note */}
-          <p className="text-center text-gray-500 text-sm mt-4">
+          <p className="text-center text-gray-500 text-sm mt-6">
             Having trouble with the booking form?{" "}
             <a href="tel:0430869699" className="text-brand-navy font-semibold hover:text-brand-red transition-colors">
               Call us on 0430 869 699
