@@ -54,10 +54,10 @@ const services = [
   { icon: <Car size={28} />, title: "Log Book Servicing", desc: "Keep your new car warranty intact with manufacturer-compliant log book services." },
   { icon: <Wrench size={28} />, title: "Brakes & Suspension", desc: "Full brake inspections, pad replacements, and suspension repairs for a safe, smooth ride." },
   { icon: <Wrench size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, fluid changes, and clutch replacement." },
-  { icon: <CheckCircle size={28} />, title: "Roadworthy Certificates", desc: "Licensed roadworthy inspections for vehicle transfers and registration." },
+  { icon: <CheckCircle size={28} />, title: "ARC Technician", desc: "Licenced (ARC) Technician - licenced to service air conditioners on vehicles." },
   { icon: <Car size={28} />, title: "Tyres & Wheel Alignment", desc: "New tyres, EV tyres, wheel alignment, and balancing for all makes and models." },
-  { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, air conditioning, and electrical repairs." },
-  { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics and engine repairs carried out to manufacturer standards." },
+  { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, and electrical repairs." },
+  { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics, engine repairs, and timing belt replacement carried out to manufacturer standards." },
   { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
 ];
 
