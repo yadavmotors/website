@@ -341,7 +341,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
               { icon: <Star size={24} className="text-yellow-400" />, value: "4.9 Stars", label: "Google Rating" },
-              { icon: <Users size={24} className="text-yellow-400" />, value: "2,400+", label: "Customers Served" },
+              { icon: <Users size={24} className="text-yellow-400" />, value: "3,100+", label: "Customers Served" },
               { icon: <Award size={24} className="text-yellow-400" />, value: "130+", label: "5-Star Reviews" },
               { icon: <Clock size={24} className="text-yellow-400" />, value: "5 Years", label: "Serving Werribee" },
             ].map((stat, i) => (
@@ -377,9 +377,9 @@ export default function Home() {
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
-                THREE SIMPLE STEPS TO A CAR
+                OUR THREE-STEP PROCESS
                 <br />
-                YOU CAN RELY ON.
+                KEEPS YOUR CAR RUNNING SMOOTHLY.
               </h2>
             </div>
           </FadeIn>
@@ -706,6 +706,79 @@ export default function Home() {
               />
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* ─── SERVICING AREAS ─── */}
+      <section className="section-white py-16 lg:py-24">
+        <div className="container">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <p
+                className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                Service Areas
+              </p>
+              <h2
+                className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                WE SERVE WERRIBEE & THE
+                <br />
+                WESTERN SUBURBS.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                suburb: "Werribee",
+                postcode: "3030",
+                desc: "Central Werribee, Werribee South, Watton Street & freeway area",
+              },
+              {
+                suburb: "Hoppers Crossing",
+                postcode: "3029",
+                desc: "North/north-east of Werribee, across the freeway",
+              },
+              {
+                suburb: "Wyndham Vale",
+                postcode: "3024",
+                desc: "North-west of Werribee",
+              },
+              {
+                suburb: "Mambourin",
+                postcode: "3024",
+                desc: "West of Werribee",
+              },
+              {
+                suburb: "Manor Lakes",
+                postcode: "3024",
+                desc: "North-west, associated with Wyndham Vale area",
+              },
+            ].map((area, i) => (
+              <FadeIn key={area.suburb} delay={i * 80}>
+                <div className="bg-gradient-to-br from-brand-navy to-blue-900 rounded-lg p-6 text-white shadow-md hover:shadow-lg transition-shadow">
+                  <h3
+                    className="text-xl font-bold mb-1"
+                    style={{ fontFamily: "'Oswald', sans-serif" }}
+                  >
+                    {area.suburb}
+                  </h3>
+                  <p className="text-brand-red font-semibold text-sm mb-3">({area.postcode})</p>
+                  <p className="text-white/80 text-sm leading-relaxed">{area.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={500}>
+            <p className="text-center text-gray-600 text-sm mt-10">
+              <strong>Free pick-up & drop-off available within 10km of our workshop.</strong> Call us to discuss your location.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
