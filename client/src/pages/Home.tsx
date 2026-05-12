@@ -16,7 +16,7 @@ import type { Review } from "@shared/types";
 
 // Asset URLs
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-hero-YWBsshsFWNgTCVje28g9o5.webp";
-const MECHANIC_IMG = "/manus-storage/ChatGPTImageMay11,2026,08_50_20AM_1ca0f0c2.png";
+const MECHANIC_IMG = "/manus-storage/ChatGPTImageMay12,2026,03_41_39PM_a7855646.png";
 const DIAGNOSTICS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-diagnostics-GWZWBGuPpfpVpHmet5Fb5o.webp";
 const SUBURB_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-werribee-suburb-Br4Adqdyum6gssNdDFED8j.webp";
 
