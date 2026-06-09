@@ -34,7 +34,7 @@ export default function BookOnline() {
             BOOK YOUR SERVICE ONLINE
           </h1>
           <p className="text-white/75 text-lg max-w-xl">
-            Select your service, choose a time that suits you, and we'll take care of the rest. No guesswork, no hidden costs.
+            Book your car service online at Yadav Motors. Fast, transparent, and hassle-free appointment booking in Werribee.
           </p>
 
           {/* Quick info about booking process */}
@@ -78,9 +78,9 @@ export default function BookOnline() {
 
           {/* Important note about booking process */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8 max-w-2xl mx-auto">
-            <h3 className="text-brand-navy font-bold text-lg mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              📱 Booking Confirmation Process
-            </h3>
+            <h2 className="text-brand-navy font-bold text-2xl mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              📱 How Our Booking Process Works
+            </h2>
             <div className="space-y-3 text-sm text-gray-700">
               <div className="flex gap-3">
                 <span className="font-bold text-brand-red min-w-6">1.</span>
