@@ -31,34 +31,31 @@ Ask Rama to provide the **exact email address** he used to create his Manus acco
 
 ---
 
-### Step 2: Open Project Settings
+### Step 2: Open the Share Dialog
 
 1. Go to **https://manus.im**
 2. Log in with your account
 3. Find the **"Yadav Motors"** project
 4. Click **"View"** to open it
-5. In the top-right, click the **Settings icon** (⚙️)
+5. In the **top-right corner**, click the **"Share"** button
 
 ---
 
-### Step 3: Find Transfer Option
+### Step 3: Access the Share Tab
 
-In the Settings panel, look for:
-- **"Transfer Ownership"** or
-- **"Project Sharing"** or
-- **"Collaborators"** or
-- **"Team"**
+A dialog will appear with two tabs:
+- **"Share"** tab (for transferring ownership)
+- **"Collaborate"** tab (for adding team members)
 
-*(The exact name may vary depending on your Manus version)*
+Make sure you're on the **"Share"** tab (it should be the default).
 
 ---
 
-### Step 4: Initiate Transfer
+### Step 4: Enter Rama's Email and Invite
 
-1. Click the transfer/sharing option
-2. Select **"Transfer Ownership"** (not just "Add Collaborator")
-3. Enter **Rama's email address**
-4. Click **"Send Invitation"** or **"Transfer"**
+1. In the text field, enter **Rama's Manus email address**
+2. Click the **"Invite"** button
+3. Rama will receive an email invitation to accept ownership
 
 ---
 
