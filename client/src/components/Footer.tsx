@@ -87,11 +87,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:rsauto.werribee@gmail.com"
+                  href="mailto:info@yadavmotors.com.au"
                   className="flex items-start gap-2 text-white/70 hover:text-white text-sm transition-colors"
                 >
                   <Mail size={15} className="mt-0.5 flex-shrink-0 text-yellow-400" />
-                  rsauto.werribee@gmail.com
+                  info@yadavmotors.com.au
                 </a>
               </li>
               <li>
