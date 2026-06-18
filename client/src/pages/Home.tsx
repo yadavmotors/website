@@ -102,7 +102,7 @@ export default function Home() {
             {/* Trust badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
               <Star size={14} className="text-yellow-400 fill-yellow-400" />
-              <span className="text-white text-sm font-medium">4.9 Stars · 130 Google Reviews · Werribee's Most Trusted Mechanic</span>
+              <span className="text-white text-sm font-medium">4.9 Stars · 140 Google Reviews · Werribee's Most Trusted Mechanic</span>
             </div>
 
             <h1
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-3 gap-4 max-w-lg">
               {[
                 { value: "4.9★", label: "Google Rating" },
-                { value: "130+", label: "5-Star Reviews" },
+                { value: "140+", label: "5-Star Reviews" },
                 { value: "5 Yrs", label: "Serving Werribee" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">

@@ -30,7 +30,7 @@ export default function Footer() {
             </p>
             <div className="mt-4">
               <span className="inline-flex items-center gap-1 text-yellow-400 text-sm font-semibold">
-                ★★★★★ 4.9 Stars · 130 Reviews
+                ★★★★★ 4.9 Stars · 140 Reviews
               </span>
             </div>
           </div>
