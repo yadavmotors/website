@@ -919,7 +919,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-white/40 text-sm mt-6">
-              11/67-71 Russell St, Werribee VIC 3030 · rsauto.werribee@gmail.com
+              11/67-71 Russell St, Werribee VIC 3030 · info@yadavmotors.com.au
             </p>
           </FadeIn>
         </div>
