@@ -329,7 +329,7 @@ export default function Home() {
             {[
               { icon: <Star size={24} className="text-yellow-400" />, value: "4.9 Stars", label: "Google Rating" },
               { icon: <Users size={24} className="text-yellow-400" />, value: "3,100+", label: "Customers Served" },
-              { icon: <Award size={24} className="text-yellow-400" />, value: "130+", label: "5-Star Reviews" },
+              { icon: <Award size={24} className="text-yellow-400" />, value: "140+", label: "5-Star Reviews" },
               { icon: <Clock size={24} className="text-yellow-400" />, value: "5 Years", label: "Serving Werribee" },
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 80}>
@@ -595,7 +595,7 @@ export default function Home() {
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
-                130+ GOOGLE REVIEWS.
+                140+ GOOGLE REVIEWS.
                 <br />
                 <span style={{ color: "#CC2229" }}>4.9 STARS OVERALL.</span>
               </h2>
@@ -641,7 +641,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 text-brand-navy font-semibold hover:text-brand-red transition-colors"
               >
                 <Star size={18} className="text-yellow-400 fill-yellow-400" />
-                Read all 130 reviews on Google
+                Read all 140 reviews on Google
               </a>
             </div>
           </FadeIn>
