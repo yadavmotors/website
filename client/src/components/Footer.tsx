@@ -108,8 +108,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Hours */}
+          {/* Hours & Service Areas */}
           <div>
+            <h4
+              className="text-white font-semibold text-lg mb-4 uppercase tracking-wider"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              Service Areas
+            </h4>
+            <p className="text-white/70 text-sm mb-6 leading-relaxed">
+              Proudly serving <strong>Werribee</strong>, <strong>Hoppers Crossing</strong>, <strong>Point Cook</strong>, Wyndham Vale, and Tarneit.
+            </p>
+
             <h4
               className="text-white font-semibold text-lg mb-4 uppercase tracking-wider"
               style={{ fontFamily: "'Oswald', sans-serif" }}
