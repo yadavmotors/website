@@ -86,6 +86,24 @@ export default function BatteryTyreService() {
                 </ul>
               </div>
 
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  Frequently Asked Questions
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { q: "How long should a car battery last?", a: "Most car batteries last between 3 to 5 years. Factors like extreme weather and driving habits can affect this. We offer free battery testing to let you know exactly how much life is left in yours." },
+                    { q: "How do I know if I need a wheel alignment?", a: "If your car is pulling to one side, your steering wheel is off-center, or you notice uneven tyre wear, it's time for an alignment. Regular alignments (every 10,000km) can significantly extend your tyre life." },
+                    { q: "What tyres do you recommend for my car?", a: "The best tyre depends on your vehicle and driving needs. We stock everything from budget-friendly options to premium brands. We'll provide a recommendation based on your safety needs and budget." },
+                  ].map((faq, i) => (
+                    <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                      <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>
+                      <p className="text-gray-600 text-sm">A: {faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-brand-navy text-white p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Need a check?

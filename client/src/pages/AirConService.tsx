@@ -78,6 +78,24 @@ export default function AirConService() {
                 ))}
               </div>
 
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  Frequently Asked Questions
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { q: "How often should I service my car's air conditioning?", a: "We recommend an AC service every 2 years to ensure the system is free of leaks and the refrigerant levels are optimal. Regular servicing prevents expensive compressor failures." },
+                    { q: "Why is my car air conditioning blowing warm air?", a: "This is usually due to low refrigerant levels caused by a small leak, or a faulty compressor. As ARC Licensed technicians, we can accurately diagnose the leak and regas your system." },
+                    { q: "Does a car AC service include a cabin filter change?", a: "Yes, we always check the cabin filter. A clogged filter reduces airflow and can cause unpleasant odors. Replacing it ensures you're breathing clean air." },
+                  ].map((faq, i) => (
+                    <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                      <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>
+                      <p className="text-gray-600 text-sm">A: {faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-brand-navy text-white p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Ready to stay cool?

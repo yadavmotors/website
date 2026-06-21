@@ -86,6 +86,24 @@ export default function LogbookService() {
                 ))}
               </div>
 
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  Frequently Asked Questions
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { q: "Will a logbook service at Yadav Motors void my new car warranty?", a: "No. Under Australian Consumer Law, you have the right to choose your repairer. As long as the service is performed according to manufacturer specifications and using quality parts (which we do), your warranty remains fully intact." },
+                    { q: "How often should I get a logbook service?", a: "This depends on your vehicle's make and model. Generally, it's every 10,000km to 15,000km or every 6 to 12 months. Check your vehicle's logbook or ask us for a recommendation based on your driving habits." },
+                    { q: "Do you stamp my logbook?", a: "Yes, absolutely. We provide an official stamp in your logbook to maintain your vehicle's service history, which is essential for resale value and warranty claims." },
+                  ].map((faq, i) => (
+                    <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                      <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>
+                      <p className="text-gray-600 text-sm">A: {faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-brand-navy text-white p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Ready to book?

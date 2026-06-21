@@ -85,6 +85,24 @@ export default function BrakeClutchService() {
                 </ul>
               </div>
 
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  Frequently Asked Questions
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { q: "How often should I have my brakes checked?", a: "We recommend a brake inspection at least once a year or every 15,000km. However, if you notice any squealing, vibrations, or a change in braking performance, you should have them checked immediately." },
+                    { q: "How long does a brake pad replacement take?", a: "A standard brake pad replacement typically takes between 1 to 2 hours per axle. We offer same-day service for most brake repairs to get you back on the road quickly." },
+                    { q: "My clutch is slipping. Does it need a full replacement?", a: "Not necessarily. Sometimes it's a hydraulic issue or needs a simple adjustment. We'll perform a thorough diagnostic to find the root cause and provide the most cost-effective solution." },
+                  ].map((faq, i) => (
+                    <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                      <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>
+                      <p className="text-gray-600 text-sm">A: {faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-brand-navy text-white p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Don't compromise on safety
