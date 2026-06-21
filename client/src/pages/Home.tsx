@@ -127,6 +127,10 @@ export default function Home() {
               <Link href="/book" className="btn-primary text-center text-lg py-4 px-8">
                 Book Your Service Online
               </Link>
+              {/* SEO Background Keywords */}
+              <div className="sr-only">
+                Werribee mechanic providing engine light on diagnostics, car diagnostic Werribee, and same day car service. Expert vehicle diagnostics and troubleshooting.
+              </div>
               <a
                 href="tel:0430869699"
                 className="btn-secondary text-center text-lg py-4 px-8 flex items-center justify-center gap-2"
