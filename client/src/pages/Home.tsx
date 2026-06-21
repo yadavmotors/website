@@ -102,7 +102,7 @@ export default function Home() {
             {/* Trust badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
               <Star size={14} className="text-yellow-400 fill-yellow-400" />
-              <span className="text-white text-sm font-medium">4.9 Stars · 145 Google Reviews · Werribee's Most Trusted Mechanic</span>
+              <span className="text-white text-sm font-medium">4.9 Stars · 148 Google Reviews · Werribee's Most Trusted Mechanic</span>
             </div>
 
             <h1
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-3 gap-4 max-w-lg">
               {[
                 { value: "4.9★", label: "Google Rating" },
-                { value: "145+", label: "5-Star Reviews" },
+                { value: "148+", label: "5-Star Reviews" },
                 { value: "5 Yrs", label: "Serving Werribee" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
@@ -333,7 +333,7 @@ export default function Home() {
             {[
               { icon: <Star size={24} className="text-yellow-400" />, value: "4.9 Stars", label: "Google Rating" },
               { icon: <Users size={24} className="text-yellow-400" />, value: "3,100+", label: "Customers Served" },
-              { icon: <Award size={24} className="text-yellow-400" />, value: "145+", label: "5-Star Reviews" },
+              { icon: <Award size={24} className="text-yellow-400" />, value: "148+", label: "5-Star Reviews" },
               { icon: <Clock size={24} className="text-yellow-400" />, value: "5 Years", label: "Serving Werribee" },
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 80}>
@@ -625,7 +625,7 @@ export default function Home() {
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
-                145+ GOOGLE REVIEWS.
+                148+ GOOGLE REVIEWS.
                 <br />
                 <span style={{ color: "#CC2229" }}>4.9 STARS OVERALL.</span>
               </h2>
@@ -671,7 +671,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 text-brand-navy font-semibold hover:text-brand-red transition-colors"
               >
                 <Star size={18} className="text-yellow-400 fill-yellow-400" />
-                Read all 145 reviews on Google
+                Read all 148 reviews on Google
               </a>
             </div>
           </FadeIn>
