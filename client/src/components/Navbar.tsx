@@ -25,11 +25,16 @@ export default function Navbar() {
     { label: "Find Us", href: "#location" },
   ];
 
-  const scrollTo = (href: string) => {
+  const handleNavClick = (href: string) => {
     setIsOpen(false);
     if (href.startsWith("#")) {
       const el = document.querySelector(href);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // If element not found (e.g. on a subpage), go to home then scroll
+        window.location.href = "/" + href;
+      }
     }
   };
 
@@ -56,7 +61,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="text-white/80 hover:text-white font-medium transition-colors duration-200"
                 style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "1rem" }}
               >
@@ -110,7 +115,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="text-left text-white/80 hover:text-white py-3 px-2 text-lg font-medium border-b border-white/10 last:border-0"
                 style={{ fontFamily: "'Source Sans 3', sans-serif" }}
               >

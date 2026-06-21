@@ -53,11 +53,11 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 }
 
 const services = [
-  { icon: <Car size={28} />, title: "Log Book Servicing", desc: "Keep your new car warranty intact with manufacturer-compliant log book services." },
-  { icon: <Wrench size={28} />, title: "Brakes & Suspension", desc: "Full brake inspections, pad replacements, and suspension repairs for a safe, smooth ride." },
+  { icon: <Car size={28} />, title: "Log Book Servicing", desc: "Keep your new car warranty intact with manufacturer-compliant log book services.", href: "/services/logbook" },
+  { icon: <Wrench size={28} />, title: "Brakes & Clutch", desc: "Full brake inspections, pad replacements, and clutch repair for a safe, smooth ride.", href: "/services/brakes-clutch" },
+  { icon: <CheckCircle size={28} />, title: "ARC Technician", desc: "Licenced (ARC) Technician - licenced to service air conditioners on vehicles. ARC RTA:AU54941", href: "/services/air-conditioning" },
+  { icon: <Car size={28} />, title: "Tyres & Wheel Alignment", desc: "New tyres, EV tyres, wheel alignment, and balancing for all makes and models.", href: "/services/battery-tyres" },
   { icon: <Wrench size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, fluid changes, and clutch replacement." },
-  { icon: <CheckCircle size={28} />, title: "ARC Technician", desc: "Licenced (ARC) Technician - licenced to service air conditioners on vehicles. ARC RTA:AU54941" },
-  { icon: <Car size={28} />, title: "Tyres & Wheel Alignment", desc: "New tyres, EV tyres, wheel alignment, and balancing for all makes and models." },
   { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, and electrical repairs." },
   { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics, engine repairs, and timing belt replacement carried out to manufacturer standards." },
   { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
@@ -463,24 +463,50 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((service, i) => (
               <FadeIn key={service.title} delay={i * 60}>
-                <div
-                  className="group p-6 rounded-lg border border-gray-100 hover:border-brand-navy hover:shadow-md transition-all duration-200 cursor-default"
-                  style={{ backgroundColor: "#F7F8FA" }}
-                >
+                {service.href ? (
+                  <Link href={service.href}>
+                    <div
+                      className="group p-6 rounded-lg border border-gray-100 hover:border-brand-navy hover:shadow-md transition-all duration-200 cursor-pointer h-full"
+                      style={{ backgroundColor: "#F7F8FA" }}
+                    >
+                      <div
+                        className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white group-hover:scale-105 transition-transform"
+                        style={{ backgroundColor: "#1A3A8F" }}
+                      >
+                        {service.icon}
+                      </div>
+                      <h3
+                        className="text-brand-navy font-semibold text-base mb-2 group-hover:text-brand-red transition-colors"
+                        style={{ fontFamily: "'Oswald', sans-serif" }}
+                      >
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.desc}</p>
+                      <span className="text-brand-navy text-xs font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-block">
+                        Learn More →
+                      </span>
+                    </div>
+                  </Link>
+                ) : (
                   <div
-                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white group-hover:scale-105 transition-transform"
-                    style={{ backgroundColor: "#1A3A8F" }}
+                    className="group p-6 rounded-lg border border-gray-100 hover:border-brand-navy hover:shadow-md transition-all duration-200 cursor-default h-full"
+                    style={{ backgroundColor: "#F7F8FA" }}
                   >
-                    {service.icon}
+                    <div
+                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white group-hover:scale-105 transition-transform"
+                      style={{ backgroundColor: "#1A3A8F" }}
+                    >
+                      {service.icon}
+                    </div>
+                    <h3
+                      className="text-brand-navy font-semibold text-base mb-2"
+                      style={{ fontFamily: "'Oswald', sans-serif" }}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
                   </div>
-                  <h3
-                    className="text-brand-navy font-semibold text-base mb-2"
-                    style={{ fontFamily: "'Oswald', sans-serif" }}
-                  >
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
-                </div>
+                )}
               </FadeIn>
             ))}
           </div>
