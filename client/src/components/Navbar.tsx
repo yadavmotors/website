@@ -39,6 +39,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "shadow-lg" : ""
@@ -142,5 +143,31 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+
+    {/* Floating Book Now Button - Appears on scroll */}
+    <div 
+      className={`fixed bottom-8 right-8 z-[60] transition-all duration-500 transform ${
+        scrolled ? "translate-y-0 opacity-100 scale-100" : "translate-y-20 opacity-0 scale-50 pointer-events-none"
+      }`}
+    >
+      <Link href="/book">
+        <div className="group relative">
+          {/* Animated background rings */}
+          <div className="absolute inset-0 bg-brand-red rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
+          <div className="absolute inset-0 bg-brand-red rounded-full animate-pulse opacity-40"></div>
+          
+          <button 
+            className="relative bg-brand-red text-white font-bold py-4 px-8 rounded-full shadow-2xl hover:bg-red-700 transition-all duration-300 flex items-center gap-3 uppercase tracking-wider"
+            style={{ fontFamily: "'Oswald', sans-serif", boxShadow: "0 10px 25px -5px rgba(204, 34, 41, 0.5)" }}
+          >
+            <span className="text-lg">Book Now</span>
+            <div className="bg-white/20 p-1 rounded-full">
+              <Phone size={18} className="animate-bounce" />
+            </div>
+          </button>
+        </div>
+      </Link>
+    </div>
+    </>
   );
 }
