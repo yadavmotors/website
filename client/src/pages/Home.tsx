@@ -66,17 +66,7 @@ const services = [
 
 export default function Home() {
   const { data: apiReviews = [] } = trpc.reviews.list.useQuery();
-  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const reviews = apiReviews.length > 0 ? apiReviews : [];
-
-  // Rotate reviews every 6 seconds
-  useEffect(() => {
-    if (reviews.length === 0) return;
-    const interval = setInterval(() => {
-      setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [reviews.length]);
 
   return (
     <div className="min-h-screen">
@@ -634,30 +624,51 @@ export default function Home() {
           </FadeIn>
 
           {reviews.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Show 2 reviews at a time, rotating */}
-              {[currentReviewIndex, (currentReviewIndex + 1) % reviews.length].map((idx) => {
-                const review = reviews[idx];
-                return (
-                  <FadeIn key={`${review.id}-${idx}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                      <div className="flex items-center gap-1 mb-3">
-                        {Array.from({ length: review.rating }).map((_, j) => (
-                          <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
-                        ))}
-                      </div>
-                      <p className="text-gray-700 leading-relaxed mb-4 text-sm italic">"{review.text}"</p>
-                      <div className="flex items-center justify-between">
-                        <span className="font-semibold text-brand-navy text-sm">{review.name}</span>
-                        <span className="text-gray-400 text-xs flex items-center gap-1">
-                          <MapPin size={12} />
-                          {review.suburb}
-                        </span>
-                      </div>
+            <div className="relative overflow-hidden py-4">
+              {/* Infinite scroll container */}
+              <div 
+                className="flex gap-6 animate-scroll hover:pause"
+                style={{ 
+                  width: "max-content",
+                  animation: "scroll 60s linear infinite"
+                }}
+              >
+                {/* Triple the reviews to ensure no gaps on large screens */}
+                {[...reviews, ...reviews, ...reviews].map((review, idx) => (
+                  <div 
+                    key={`${review.id}-${idx}`} 
+                    className="w-[300px] md:w-[450px] bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex-shrink-0"
+                  >
+                    <div className="flex items-center gap-1 mb-3">
+                      {Array.from({ length: review.rating }).map((_, j) => (
+                        <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
+                      ))}
                     </div>
-                  </FadeIn>
-                );
-              })}
+                    <p className="text-gray-700 leading-relaxed mb-4 text-sm italic">"{review.text}"</p>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-brand-navy text-sm">{review.name}</span>
+                      <span className="text-gray-400 text-xs flex items-center gap-1">
+                        <MapPin size={12} />
+                        {review.suburb}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Add custom CSS for the animation */}
+              <style dangerouslySetInnerHTML={{ __html: `
+                @keyframes scroll {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(-33.33%); }
+                }
+                .animate-scroll {
+                  display: flex;
+                }
+                .hover\\:pause:hover {
+                  animation-play-state: paused;
+                }
+              `}} />
             </div>
           ) : (
             <div className="text-center text-gray-500 py-8">Loading reviews...</div>
