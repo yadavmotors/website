@@ -2,6 +2,7 @@ import { Phone, MapPin, Clock, ArrowLeft, CheckCircle, AlertTriangle } from "luc
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_DATA } from "@/lib/constants";
 
 export default function BrakeClutchService() {
   return (
@@ -108,15 +109,15 @@ export default function BrakeClutchService() {
                   Don't compromise on safety
                 </h3>
                 <p className="mb-6 text-white/80">
-                  Visit Yadav Motors in Werribee for a professional brake and clutch inspection. Call 0430 869 699 to book.
+                  Visit Yadav Motors in Werribee for a professional brake and clutch inspection. Call {SITE_DATA.contact.phone} to book.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/book" className="btn-primary">
                     Book Inspection Now
                   </Link>
-                  <a href="tel:0430869699" className="bg-white text-brand-navy font-bold py-3 px-6 rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
+                                    <a href={SITE_DATA.contact.phoneLink} className="bg-white text-brand-navy font-bold py-3 px-6 rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
                     <Phone size={18} />
-                    0430 869 699
+                    {SITE_DATA.contact.phone}
                   </a>
                 </div>
               </div>
@@ -131,7 +132,7 @@ export default function BrakeClutchService() {
                   <div className="space-y-4">
                     <div className="flex gap-3">
                       <MapPin className="text-brand-red flex-shrink-0" size={20} />
-                      <span className="text-gray-700 text-sm">11/67-71 Russell St, Werribee VIC 3030</span>
+                      <span className="text-gray-700 text-sm">{SITE_DATA.contact.address}</span>
                     </div>
                     <div className="flex gap-3">
                       <Clock className="text-brand-red flex-shrink-0" size={20} />
@@ -139,7 +140,7 @@ export default function BrakeClutchService() {
                     </div>
                     <div className="flex gap-3">
                       <Phone className="text-brand-red flex-shrink-0" size={20} />
-                      <span className="text-gray-700 text-sm">0430 869 699</span>
+                      <span className="text-gray-700 text-sm">{SITE_DATA.contact.phone}</span>
                     </div>
                   </div>
                 </div>

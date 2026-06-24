@@ -7,6 +7,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
+import { SITE_DATA } from "@/lib/constants";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,12 +75,12 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:0430869699"
+              href={SITE_DATA.contact.phoneLink}
               className="flex items-center gap-2 text-white font-semibold hover:text-yellow-300 transition-colors"
               style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.1rem", letterSpacing: "0.05em" }}
             >
               <Phone size={18} />
-              0430 869 699
+              {SITE_DATA.contact.phone}
             </a>
             <Link href="/book" className="btn-primary text-sm py-2 px-5">
               Book Now
@@ -89,11 +90,11 @@ export default function Navbar() {
           {/* Mobile: phone + hamburger */}
           <div className="flex lg:hidden items-center gap-3">
             <a
-              href="tel:0430869699"
+              href={SITE_DATA.contact.phoneLink}
               className="flex items-center gap-1 text-white font-semibold text-sm"
             >
               <Phone size={16} />
-              <span className="hidden sm:inline">0430 869 699</span>
+              <span className="hidden sm:inline">{SITE_DATA.contact.phone}</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -125,11 +126,11 @@ export default function Navbar() {
             ))}
             <div className="pt-3">
               <a
-                href="tel:0430869699"
+                href={SITE_DATA.contact.phoneLink}
                 className="flex items-center gap-2 text-white font-semibold py-2"
               >
                 <Phone size={18} />
-                0430 869 699
+                {SITE_DATA.contact.phone}
               </a>
               <Link
                 href="/book"

@@ -2,6 +2,7 @@ import { Phone, MapPin, Clock, ArrowLeft, CheckCircle, Snowflake } from "lucide-
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_DATA } from "@/lib/constants";
 
 export default function AirConService() {
   return (
@@ -101,15 +102,15 @@ export default function AirConService() {
                   Ready to stay cool?
                 </h3>
                 <p className="mb-6 text-white/80">
-                  Keep your cool this summer. Book your car AC service with Yadav Motors in Werribee today. Call 0430 869 699.
+                  Keep your cool this summer. Book your car AC service with Yadav Motors in Werribee today. Call {SITE_DATA.contact.phone}.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/book" className="btn-primary">
                     Book AC Service Now
                   </Link>
-                  <a href="tel:0430869699" className="bg-white text-brand-navy font-bold py-3 px-6 rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
+                                    <a href={SITE_DATA.contact.phoneLink} className="bg-white text-brand-navy font-bold py-3 px-6 rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
                     <Phone size={18} />
-                    0430 869 699
+                    {SITE_DATA.contact.phone}
                   </a>
                 </div>
               </div>
@@ -124,7 +125,7 @@ export default function AirConService() {
                   <div className="space-y-4">
                     <div className="flex gap-3">
                       <MapPin className="text-brand-red flex-shrink-0" size={20} />
-                      <span className="text-gray-700 text-sm">11/67-71 Russell St, Werribee VIC 3030</span>
+                      <span className="text-gray-700 text-sm">{SITE_DATA.contact.address}</span>
                     </div>
                     <div className="flex gap-3">
                       <Clock className="text-brand-red flex-shrink-0" size={20} />
@@ -132,7 +133,7 @@ export default function AirConService() {
                     </div>
                     <div className="flex gap-3">
                       <Phone className="text-brand-red flex-shrink-0" size={20} />
-                      <span className="text-gray-700 text-sm">0430 869 699</span>
+                      <span className="text-gray-700 text-sm">{SITE_DATA.contact.phone}</span>
                     </div>
                   </div>
                 </div>

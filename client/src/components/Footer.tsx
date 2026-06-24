@@ -5,6 +5,7 @@
 
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "wouter";
+import { SITE_DATA } from "@/lib/constants";
 
 export default function Footer() {
   const scrollTo = (href: string) => {
@@ -30,7 +31,7 @@ export default function Footer() {
             </p>
             <div className="mt-4">
               <span className="inline-flex items-center gap-1 text-yellow-400 text-sm font-semibold">
-                ★★★★★ 4.9 Stars · 148 Reviews
+                ★★★★★ {SITE_DATA.googleReviews.rating} Stars · {SITE_DATA.googleReviews.count} Reviews
               </span>
             </div>
           </div>
@@ -91,7 +92,7 @@ export default function Footer() {
                   className="flex items-start gap-2 text-white/70 hover:text-white text-sm transition-colors"
                 >
                   <Mail size={15} className="mt-0.5 flex-shrink-0 text-yellow-400" />
-                  info@yadavmotors.com.au
+                  {SITE_DATA.contact.email}
                 </a>
               </li>
               <li>
@@ -102,7 +103,7 @@ export default function Footer() {
                   className="flex items-start gap-2 text-white/70 hover:text-white text-sm transition-colors"
                 >
                   <MapPin size={15} className="mt-0.5 flex-shrink-0 text-yellow-400" />
-                  11/67-71 Russell St, Werribee VIC 3030
+                  {SITE_DATA.contact.address}
                 </a>
               </li>
             </ul>
@@ -117,7 +118,11 @@ export default function Footer() {
               Service Areas
             </h4>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
-              Proudly serving <strong>Werribee</strong>, <strong>Hoppers Crossing</strong>, <strong>Point Cook</strong>, Wyndham Vale, and Tarneit.
+              Proudly serving {SITE_DATA.serviceAreas.map((area, i) => (
+                <span key={area}>
+                  <strong>{area}</strong>{i < SITE_DATA.serviceAreas.length - 1 ? ", " : "."}
+                </span>
+              ))}
             </p>
 
             <h4
