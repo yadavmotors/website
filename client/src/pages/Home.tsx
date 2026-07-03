@@ -344,6 +344,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── BRANDS WE SERVICE ─── */}
+      <section className="bg-gray-50 py-12 lg:py-16 border-b border-gray-200">
+        <div className="container">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <p
+                className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-2"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                Expertise Across All Makes
+              </p>
+              <h2
+                className="text-3xl lg:text-4xl font-bold text-brand-navy"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                BRANDS WE SERVICE
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            {[
+              { name: "Toyota", icon: "https://www.carlogos.org/car-logos/toyota-logo.png" },
+              { name: "Mazda", icon: "https://www.carlogos.org/car-logos/mazda-logo.png" },
+              { name: "Honda", icon: "https://www.carlogos.org/car-logos/honda-logo.png" },
+              { name: "Hyundai", icon: "https://www.carlogos.org/car-logos/hyundai-logo.png" },
+              { name: "Kia", icon: "https://www.carlogos.org/car-logos/kia-logo.png" },
+              { name: "Ford", icon: "https://www.carlogos.org/car-logos/ford-logo.png" },
+              { name: "Nissan", icon: "https://www.carlogos.org/car-logos/nissan-logo.png" },
+              { name: "Volkswagen", icon: "https://www.carlogos.org/car-logos/volkswagen-logo.png" },
+              { name: "BMW", icon: "https://www.carlogos.org/car-logos/bmw-logo.png" },
+              { name: "Mercedes-Benz", icon: "https://www.carlogos.org/car-logos/mercedes-benz-logo.png" },
+              { name: "Audi", icon: "https://www.carlogos.org/car-logos/audi-logo.png" },
+              { name: "Mitsubishi", icon: "https://www.carlogos.org/car-logos/mitsubishi-logo.png" },
+              { name: "Subaru", icon: "https://www.carlogos.org/car-logos/subaru-logo.png" },
+              { name: "And More", icon: "" }
+            ].map((brand, i) => (
+              <FadeIn key={brand.name} delay={i * 50}>
+                {brand.icon ? (
+                  <img
+                    src={brand.icon}
+                    alt={`${brand.name} logo`}
+                    className="h-8 md:h-10 w-auto object-contain filter drop-shadow-sm"
+                  />
+                ) : (
+                  <span className="text-gray-400 font-bold text-xs uppercase tracking-tighter whitespace-nowrap">
+                    & Many More
+                  </span>
+                )}
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── THE PLAN ─── */}
       <section className="section-light py-16 lg:py-24">
         <div className="container">
