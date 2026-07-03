@@ -6,9 +6,15 @@
 export const SITE_DATA = {
   // Google Review Stats
   googleReviews: {
-    count: 151,
+    count: 157,
     rating: 4.9,
-    displayCount: "151+", // Used for "151+ Reviews" labels
+    displayCount: "157+", // Used for "157+ Reviews" labels
+  },
+  
+  // Experience
+  experience: {
+    years: "5+",
+    label: "5+ Years Serving Werribee",
   },
   
   // Contact Info

@@ -136,7 +136,7 @@ export default function Home() {
               {[
                 { value: `${SITE_DATA.googleReviews.rating}★`, label: "Google Rating" },
                 { value: SITE_DATA.googleReviews.displayCount, label: "5-Star Reviews" },
-                { value: "5 Yrs", label: "Serving Werribee" },
+                { value: `${SITE_DATA.experience.years} Yrs`, label: "Serving Werribee" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div
@@ -325,7 +325,7 @@ export default function Home() {
               { icon: <Star size={24} className="text-yellow-400" />, value: `${SITE_DATA.googleReviews.rating} Stars`, label: "Google Rating" },
               { icon: <Users size={24} className="text-yellow-400" />, value: "3,100+", label: "Customers Served" },
               { icon: <Award size={24} className="text-yellow-400" />, value: SITE_DATA.googleReviews.displayCount, label: "5-Star Reviews" },
-              { icon: <Clock size={24} className="text-yellow-400" />, value: "5 Years", label: "Serving Werribee" },
+              { icon: <Clock size={24} className="text-yellow-400" />, value: `${SITE_DATA.experience.years} Years`, label: "Serving Werribee" },
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 80}>
                 <div className="flex flex-col items-center gap-2">
