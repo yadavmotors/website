@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, ArrowLeft, CheckCircle, AlertTriangle } from "lucide-react";
+import { Phone, MapPin, Clock, ArrowLeft, CheckCircle, AlertTriangle, Car, Wrench } from "lucide-react";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -38,6 +38,13 @@ export default function BrakeClutchService() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
+              {/* Other Services Navigation (Top) */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                <span className="text-gray-500 text-sm font-medium mr-2">Our Other Services:</span>
+                <Link href="/services/logbook" className="text-brand-navy hover:text-brand-red text-sm font-semibold underline decoration-brand-red/30 underline-offset-4">Logbook Servicing</Link>
+                <Link href="/services/air-conditioning" className="text-brand-navy hover:text-brand-red text-sm font-semibold underline decoration-brand-red/30 underline-offset-4">Air Conditioning</Link>
+                <Link href="/services/battery-tyres" className="text-brand-navy hover:text-brand-red text-sm font-semibold underline decoration-brand-red/30 underline-offset-4">Battery & Tyres</Link>
+              </div>
               <h2 className="text-3xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
                 Reliable Safety Solutions
               </h2>
@@ -104,7 +111,7 @@ export default function BrakeClutchService() {
                 </div>
               </div>
 
-              <div className="bg-brand-navy text-white p-8 rounded-xl">
+              <div className="bg-brand-navy text-white p-8 rounded-xl mb-12">
                 <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Don't compromise on safety
                 </h3>
@@ -119,6 +126,30 @@ export default function BrakeClutchService() {
                     <Phone size={18} />
                     {SITE_DATA.contact.phone}
                   </a>
+                </div>
+              </div>
+
+              {/* Cross-linking Section */}
+              <div className="border-t border-gray-100 pt-10">
+                <h3 className="text-2xl font-bold text-brand-navy mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  Explore Our Other Expert Services
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <Link href="/services/logbook" className="group bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-brand-red transition-all">
+                    <Car className="text-brand-red mb-3 group-hover:scale-110 transition-transform" size={24} />
+                    <h4 className="font-bold text-brand-navy mb-2">Logbook Servicing</h4>
+                    <p className="text-gray-600 text-xs">Maintain your warranty with dealership-level service.</p>
+                  </Link>
+                  <Link href="/services/air-conditioning" className="group bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-brand-red transition-all">
+                    <CheckCircle className="text-brand-red mb-3 group-hover:scale-110 transition-transform" size={24} />
+                    <h4 className="font-bold text-brand-navy mb-2">Air Conditioning</h4>
+                    <p className="text-gray-600 text-xs">ARC Licensed technicians for vehicle AC servicing.</p>
+                  </Link>
+                  <Link href="/services/battery-tyres" className="group bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-brand-red transition-all">
+                    <Wrench className="text-brand-red mb-3 group-hover:scale-110 transition-transform" size={24} />
+                    <h4 className="font-bold text-brand-navy mb-2">Battery & Tyres</h4>
+                    <p className="text-gray-600 text-xs">Quality tyres and reliable battery replacements.</p>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -233,7 +233,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src={MECHANIC_IMG}
-                  alt="Rama Krishna — Yadav Motors"
+                  alt="Rama Krishna, founder of Yadav Motors, a trusted local mechanic in Werribee providing expert car repairs and logbook servicing."
                   className="rounded-lg shadow-xl w-full max-w-md mx-auto lg:mx-0 object-cover"
                   style={{ maxHeight: "520px" }}
                 />
@@ -831,7 +831,7 @@ export default function Home() {
               {
                 suburb: "Hoppers Crossing",
                 postcode: "3029",
-                desc: "North/north-east of Werribee, across the freeway",
+                desc: "Trusted local mechanic service for Hoppers Crossing families. Expert diagnostics and logbook servicing just minutes away.",
               },
               {
                 suburb: "Wyndham Vale",
@@ -846,7 +846,12 @@ export default function Home() {
               {
                 suburb: "Manor Lakes",
                 postcode: "3024",
-                desc: "North-west, associated with Wyndham Vale area",
+                desc: "Quality car repairs and servicing for the Manor Lakes community. Reliable workmanship and transparent pricing.",
+              },
+              {
+                suburb: "Point Cook",
+                postcode: "3030",
+                desc: "Professional car service for Point Cook residents. Dealer-level expertise without the dealership price tag.",
               },
             ].map((area, i) => (
               <FadeIn key={area.suburb} delay={i * 80}>
