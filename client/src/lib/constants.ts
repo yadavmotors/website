@@ -6,9 +6,9 @@
 export const SITE_DATA = {
   // Google Review Stats
   googleReviews: {
-    count: 157,
+    count: 163,
     rating: 4.9,
-    displayCount: "157+", // Used for "157+ Reviews" labels
+    displayCount: "163+", // Used for "163+ Reviews" labels
   },
   
   // Experience
@@ -30,8 +30,13 @@ export const SITE_DATA = {
   serviceAreas: [
     "Werribee",
     "Hoppers Crossing",
+    "Tarneit",
     "Point Cook",
     "Wyndham Vale",
-    "Tarneit"
+    "Truganina",
+    "Laverton",
+    "Mambourin",
+    "Manor Lakes",
+    "Little River"
   ]
 };

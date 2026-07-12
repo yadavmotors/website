@@ -826,32 +826,52 @@ export default function Home() {
               {
                 suburb: "Werribee",
                 postcode: "3030",
-                desc: "Central Werribee, Werribee South, Watton Street & freeway area",
+                desc: "Central Werribee's trusted local workshop for all mechanical repairs and logbook servicing.",
               },
               {
                 suburb: "Hoppers Crossing",
                 postcode: "3029",
-                desc: "Trusted local mechanic service for Hoppers Crossing families. Expert diagnostics and logbook servicing just minutes away.",
+                desc: "Expert car diagnostics and repairs for Hoppers Crossing residents, just a short drive away.",
               },
               {
-                suburb: "Wyndham Vale",
-                postcode: "3024",
-                desc: "North-west of Werribee",
-              },
-              {
-                suburb: "Mambourin",
-                postcode: "3024",
-                desc: "West of Werribee",
-              },
-              {
-                suburb: "Manor Lakes",
-                postcode: "3024",
-                desc: "Quality car repairs and servicing for the Manor Lakes community. Reliable workmanship and transparent pricing.",
+                suburb: "Tarneit",
+                postcode: "3029",
+                desc: "Reliable car servicing and quality workmanship for the growing Tarneit community.",
               },
               {
                 suburb: "Point Cook",
                 postcode: "3030",
-                desc: "Professional car service for Point Cook residents. Dealer-level expertise without the dealership price tag.",
+                desc: "Dealer-level expertise for Point Cook families without the expensive dealership price tag.",
+              },
+              {
+                suburb: "Wyndham Vale",
+                postcode: "3024",
+                desc: "Professional auto repairs and maintenance services for all vehicle makes in Wyndham Vale.",
+              },
+              {
+                suburb: "Truganina",
+                postcode: "3029",
+                desc: "Quality mechanical solutions and honest advice for car owners in the Truganina area.",
+              },
+              {
+                suburb: "Laverton",
+                postcode: "3028",
+                desc: "Expert automotive care and transparent pricing for the Laverton local community.",
+              },
+              {
+                suburb: "Mambourin",
+                postcode: "3024",
+                desc: "Dependable car servicing and repairs for Mambourin residents at our nearby workshop.",
+              },
+              {
+                suburb: "Manor Lakes",
+                postcode: "3024",
+                desc: "Comprehensive vehicle maintenance and repairs for families living in Manor Lakes.",
+              },
+              {
+                suburb: "Little River",
+                postcode: "3211",
+                desc: "Trusted automotive expertise for Little River residents seeking reliable local service.",
               },
             ].map((area, i) => (
               <FadeIn key={area.suburb} delay={i * 80}>
