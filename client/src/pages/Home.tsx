@@ -799,6 +799,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── FAQ SECTION ─── */}
+      <section className="bg-gray-50 py-16 lg:py-24 border-y border-gray-100">
+        <div className="container">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <p
+                className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                Got Questions?
+              </p>
+              <h2
+                className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                FREQUENTLY ASKED
+                <br />
+                QUESTIONS.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-4">
+            {[
+              {
+                q: "Do you offer same-day service for car diagnostics?",
+                a: "Yes! We understand that a dashboard warning light can be stressful. We offer same-day diagnostics for most vehicles in Werribee to identify the issue and get you back on the road quickly."
+              },
+              {
+                q: "Will servicing my car at Yadav Motors void my new car warranty?",
+                a: "Absolutely not. Under Australian Consumer Law, you have the right to choose your repairer. We follow manufacturer specifications and use quality parts to ensure your warranty remains fully protected."
+              },
+              {
+                q: "How often should I have my car's air conditioning serviced?",
+                a: "We recommend an AC service every 2 years. As ARC Licensed technicians (RTA: AU54941), we ensure your system is free of leaks and correctly regassed for optimal performance."
+              },
+              {
+                q: "Do you provide transparent quotes before starting any work?",
+                a: "Yes, honesty is our policy. We provide clear, upfront quotes for all repairs and servicing. We will always contact you for approval before performing any additional work found during an inspection."
+              },
+              {
+                q: "Are you experienced with European car brands like BMW and Audi?",
+                a: "Yes, we service all makes and models, including European luxury brands. We use advanced diagnostic equipment and high-quality parts to maintain the performance and reliability of your vehicle."
+              }
+            ].map((faq, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <h3 className="text-lg font-bold text-brand-navy mb-2 flex items-start gap-3">
+                    <span className="text-brand-red font-bold">Q:</span>
+                    {faq.q}
+                  </h3>
+                  <div className="text-gray-700 text-sm leading-relaxed pl-7 border-l-2 border-gray-50">
+                    <span className="font-semibold text-gray-500 mr-1">A:</span>
+                    {faq.a}
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={600}>
+            <div className="text-center mt-12">
+              <p className="text-gray-600 mb-4">Have another question?</p>
+              <a
+                href={SITE_DATA.contact.phoneLink}
+                className="inline-flex items-center gap-2 text-brand-navy font-bold hover:text-brand-red transition-colors"
+              >
+                <Phone size={18} className="text-brand-red" />
+                Call us on {SITE_DATA.contact.phone}
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* ─── SERVICING AREAS ─── */}
       <section className="section-white py-16 lg:py-24">
         <div className="container">
