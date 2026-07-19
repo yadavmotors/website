@@ -157,6 +157,14 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>© {new Date().getFullYear()} Yadav Motors. All rights reserved.</span>
+          <a
+            href="https://www.wyndham.vic.gov.au/directory/yadav-motors"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white/70 transition-colors"
+          >
+            Listed on Wyndham City Council Directory
+          </a>
           <span>11/67-71 Russell St, Werribee VIC 3030</span>
         </div>
       </div>
