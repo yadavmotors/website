@@ -323,7 +323,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
               { icon: <Star size={24} className="text-yellow-400" />, value: `${SITE_DATA.googleReviews.rating} Stars`, label: "Google Rating" },
-              { icon: <Users size={24} className="text-yellow-400" />, value: "3,100+", label: "Customers Served" },
+              { icon: <Users size={24} className="text-yellow-400" />, value: "3,250+", label: "Customers Served" },
               { icon: <Award size={24} className="text-yellow-400" />, value: SITE_DATA.googleReviews.displayCount, label: "5-Star Reviews" },
               { icon: <Clock size={24} className="text-yellow-400" />, value: `${SITE_DATA.experience.years} Years`, label: "Serving Werribee" },
             ].map((stat, i) => (
@@ -366,17 +366,45 @@ export default function Home() {
 
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 items-center justify-items-center">
             {[
-              "Toyota", "Mazda", "Hyundai", "Kia", "Ford", "Holden",
-              "Mitsubishi", "Nissan", "Honda", "Subaru", "Volkswagen", "BMW",
-              "Mercedes-Benz", "Audi", "Lexus", "Isuzu UTE", "MG", "Tesla",
-              "Suzuki", "Skoda", "Volvo", "Land Rover", "Jeep", "Renault",
-              "Peugeot", "GWM", "Haval", "BYD", "LDV", "Mahindra"
+              { name: "Toyota", logo: "https://www.carlogos.org/car-logos/toyota-logo.png" },
+              { name: "Mazda", logo: "https://www.carlogos.org/car-logos/mazda-logo.png" },
+              { name: "Hyundai", logo: "https://www.carlogos.org/car-logos/hyundai-logo.png" },
+              { name: "Kia", logo: "https://www.carlogos.org/car-logos/kia-logo.png" },
+              { name: "Ford", logo: "https://www.carlogos.org/car-logos/ford-logo.png" },
+              { name: "Holden", logo: "https://www.carlogos.org/car-logos/holden-logo.png" },
+              { name: "Mitsubishi", logo: "https://www.carlogos.org/car-logos/mitsubishi-logo.png" },
+              { name: "Nissan", logo: "https://www.carlogos.org/car-logos/nissan-logo.png" },
+              { name: "Honda", logo: "https://www.carlogos.org/car-logos/honda-logo.png" },
+              { name: "Subaru", logo: "https://www.carlogos.org/car-logos/subaru-logo.png" },
+              { name: "Volkswagen", logo: "https://www.carlogos.org/car-logos/volkswagen-logo.png" },
+              { name: "BMW", logo: "https://www.carlogos.org/car-logos/bmw-logo.png" },
+              { name: "Mercedes-Benz", logo: "https://www.carlogos.org/car-logos/mercedes-benz-logo.png" },
+              { name: "Audi", logo: "https://www.carlogos.org/car-logos/audi-logo.png" },
+              { name: "Lexus", logo: "https://www.carlogos.org/car-logos/lexus-logo.png" },
+              { name: "Isuzu", logo: "https://www.carlogos.org/car-logos/isuzu-logo.png" },
+              { name: "MG", logo: "https://www.carlogos.org/car-logos/mg-logo.png" },
+              { name: "Tesla", logo: "https://www.carlogos.org/car-logos/tesla-logo.png" },
+              { name: "Suzuki", logo: "https://www.carlogos.org/car-logos/suzuki-logo.png" },
+              { name: "Skoda", logo: "https://www.carlogos.org/car-logos/skoda-logo.png" },
+              { name: "Volvo", logo: "https://www.carlogos.org/car-logos/volvo-logo.png" },
+              { name: "Land Rover", logo: "https://www.carlogos.org/car-logos/land-rover-logo.png" },
+              { name: "Jeep", logo: "https://www.carlogos.org/car-logos/jeep-logo.png" },
+              { name: "Renault", logo: "https://www.carlogos.org/car-logos/renault-logo.png" },
+              { name: "Peugeot", logo: "https://www.carlogos.org/car-logos/peugeot-logo.png" },
+              { name: "GWM", logo: "https://www.carlogos.org/car-logos/great-wall-logo.png" },
+              { name: "Haval", logo: "https://www.carlogos.org/car-logos/haval-logo.png" },
+              { name: "BYD", logo: "https://www.carlogos.org/car-logos/byd-logo.png" },
+              { name: "LDV", logo: "https://www.carlogos.org/car-logos/ldv-logo.png" },
+              { name: "Mahindra", logo: "https://www.carlogos.org/car-logos/mahindra-logo.png" },
             ].map((brand, i) => (
-              <FadeIn key={brand} delay={i * 30}>
-                <div className="bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100 hover:border-brand-red hover:shadow-md transition-all duration-200 w-full text-center">
-                  <span className="text-brand-navy font-semibold text-sm" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                    {brand}
-                  </span>
+              <FadeIn key={brand.name} delay={i * 30}>
+                <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:border-brand-red hover:shadow-md transition-all duration-200 flex items-center justify-center h-20 w-full">
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo - serviced at Yadav Motors Werribee`}
+                    className="max-h-10 max-w-full object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </FadeIn>
             ))}
