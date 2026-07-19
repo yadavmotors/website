@@ -100,9 +100,11 @@ export default function BatteryTyreService() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { q: "How long should a car battery last?", a: "Most car batteries last between 3 to 5 years. Factors like extreme weather and driving habits can affect this. We offer free battery testing to let you know exactly how much life is left in yours." },
-                    { q: "How do I know if I need a wheel alignment?", a: "If your car is pulling to one side, your steering wheel is off-center, or you notice uneven tyre wear, it's time for an alignment. Regular alignments (every 10,000km) can significantly extend your tyre life." },
-                    { q: "What tyres do you recommend for my car?", a: "The best tyre depends on your vehicle and driving needs. We stock everything from budget-friendly options to premium brands. We'll provide a recommendation based on your safety needs and budget." },
+                    { q: "How long does a car battery last?", a: "Most car batteries last between 3 to 5 years depending on climate, driving habits, and electrical load. Extreme heat in Australian summers can shorten battery life. We offer free battery testing at Yadav Motors to check your battery's health before it leaves you stranded." },
+                    { q: "How do I know if my car battery needs replacing?", a: "Signs include slow engine cranking, dimming headlights, dashboard warning lights, or needing frequent jump starts. If your battery is over 3 years old and showing these symptoms, it's time for a replacement." },
+                    { q: "How do I know if I need a wheel alignment?", a: "If your car pulls to one side, your steering wheel is off-centre when driving straight, or you notice uneven tyre wear, it's time for an alignment. Regular alignments every 10,000 km can significantly extend your tyre life and improve fuel efficiency." },
+                    { q: "What tyres do you recommend for my car?", a: "The best tyre depends on your vehicle type, driving conditions, and budget. We supply and fit a range of quality brands to suit all needs, from budget-friendly options to premium performance tyres. We'll recommend the right tyre for your safety and driving style." },
+                    { q: "How much does a diagnostic test cost?", a: "Our diagnostic scan fee is competitive and transparent. The fee covers a full scan of your vehicle's computer systems to identify faults. If you proceed with the repair, the diagnostic fee is often included in the total cost. Call us on 0430 869 699 for current pricing." },
                   ].map((faq, i) => (
                     <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
                       <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>

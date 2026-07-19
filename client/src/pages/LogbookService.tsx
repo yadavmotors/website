@@ -100,9 +100,11 @@ export default function LogbookService() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { q: "Will a logbook service at Yadav Motors void my new car warranty?", a: "No. Under Australian Consumer Law, you have the right to choose your repairer. As long as the service is performed according to manufacturer specifications and using quality parts (which we do), your warranty remains fully intact." },
-                    { q: "How often should I get a logbook service?", a: "This depends on your vehicle's make and model. Generally, it's every 10,000km to 15,000km or every 6 to 12 months. Check your vehicle's logbook or ask us for a recommendation based on your driving habits." },
-                    { q: "Do you stamp my logbook?", a: "Yes, absolutely. We provide an official stamp in your logbook to maintain your vehicle's service history, which is essential for resale value and warranty claims." },
+                    { q: "Can I choose my own mechanic for logbook servicing?", a: "Yes. Under Australian Consumer Law, you have the right to choose any qualified mechanic for your logbook service without voiding your new car warranty. At Yadav Motors, we follow manufacturer specifications and use quality parts to keep your warranty fully protected." },
+                    { q: "How often should I get a logbook service?", a: "This depends on your vehicle's make and model. Generally, it's every 10,000 to 15,000 km or every 6 to 12 months. Check your vehicle's logbook or ask us for a recommendation based on your driving habits and conditions." },
+                    { q: "Do you stamp my logbook?", a: "Yes, absolutely. We provide an official stamp in your logbook to maintain your vehicle's complete service history, which is essential for resale value and warranty claims." },
+                    { q: "What's included in a logbook service?", a: "A logbook service includes engine oil and filter change, fluid top-ups, brake inspection, tyre check, battery test, and a comprehensive safety inspection — all as specified by your vehicle's manufacturer." },
+                    { q: "Is a logbook service cheaper than a dealership?", a: "Yes. We provide the same level of service as a dealership but at a more competitive price. You get genuine or equivalent quality parts, manufacturer-compliant procedures, and a personal, local touch — without the dealership markup." },
                   ].map((faq, i) => (
                     <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
                       <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>

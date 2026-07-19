@@ -364,35 +364,20 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 items-center justify-items-center">
             {[
-              { name: "Toyota", icon: "https://www.carlogos.org/car-logos/toyota-logo.png" },
-              { name: "Mazda", icon: "https://www.carlogos.org/car-logos/mazda-logo.png" },
-              { name: "Honda", icon: "https://www.carlogos.org/car-logos/honda-logo.png" },
-              { name: "Hyundai", icon: "https://www.carlogos.org/car-logos/hyundai-logo.png" },
-              { name: "Kia", icon: "https://www.carlogos.org/car-logos/kia-logo.png" },
-              { name: "Ford", icon: "https://www.carlogos.org/car-logos/ford-logo.png" },
-              { name: "Nissan", icon: "https://www.carlogos.org/car-logos/nissan-logo.png" },
-              { name: "Volkswagen", icon: "https://www.carlogos.org/car-logos/volkswagen-logo.png" },
-              { name: "BMW", icon: "https://www.carlogos.org/car-logos/bmw-logo.png" },
-              { name: "Mercedes-Benz", icon: "https://www.carlogos.org/car-logos/mercedes-benz-logo.png" },
-              { name: "Audi", icon: "https://www.carlogos.org/car-logos/audi-logo.png" },
-              { name: "Mitsubishi", icon: "https://www.carlogos.org/car-logos/mitsubishi-logo.png" },
-              { name: "Subaru", icon: "https://www.carlogos.org/car-logos/subaru-logo.png" },
-              { name: "And More", icon: "" }
+              "Toyota", "Mazda", "Hyundai", "Kia", "Ford", "Holden",
+              "Mitsubishi", "Nissan", "Honda", "Subaru", "Volkswagen", "BMW",
+              "Mercedes-Benz", "Audi", "Lexus", "Isuzu UTE", "MG", "Tesla",
+              "Suzuki", "Skoda", "Volvo", "Land Rover", "Jeep", "Renault",
+              "Peugeot", "GWM", "Haval", "BYD", "LDV", "Mahindra"
             ].map((brand, i) => (
-              <FadeIn key={brand.name} delay={i * 50}>
-                {brand.icon ? (
-                  <img
-                    src={brand.icon}
-                    alt={`${brand.name} logo`}
-                    className="h-8 md:h-10 w-auto object-contain filter drop-shadow-sm"
-                  />
-                ) : (
-                  <span className="text-gray-400 font-bold text-xs uppercase tracking-tighter whitespace-nowrap">
-                    & Many More
+              <FadeIn key={brand} delay={i * 30}>
+                <div className="bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100 hover:border-brand-red hover:shadow-md transition-all duration-200 w-full text-center">
+                  <span className="text-brand-navy font-semibold text-sm" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    {brand}
                   </span>
-                )}
+                </div>
               </FadeIn>
             ))}
           </div>
@@ -824,24 +809,24 @@ export default function Home() {
           <div className="max-w-4xl mx-auto grid grid-cols-1 gap-4">
             {[
               {
-                q: "Do you offer same-day service for car diagnostics?",
-                a: "Yes! We understand that a dashboard warning light can be stressful. We offer same-day diagnostics for most vehicles in Werribee to identify the issue and get you back on the road quickly."
+                q: "Do you service all makes and models of vehicles?",
+                a: "Yes. At Yadav Motors, we service and repair most makes and models, including Toyota, Mazda, Honda, Hyundai, Ford, Kia, Nissan, BMW, Mercedes-Benz, Audi, Volkswagen, and more. Our experienced technicians use quality parts and modern diagnostic equipment to keep your vehicle running at its best."
               },
               {
-                q: "Will servicing my car at Yadav Motors void my new car warranty?",
-                a: "Absolutely not. Under Australian Consumer Law, you have the right to choose your repairer. We follow manufacturer specifications and use quality parts to ensure your warranty remains fully protected."
+                q: "Will a logbook service affect my new car warranty?",
+                a: "No. We carry out manufacturer-approved logbook servicing using quality parts and oils that meet the required specifications. This means your new car warranty remains valid while you receive professional service at competitive prices."
               },
               {
-                q: "How often should I have my car's air conditioning serviced?",
-                a: "We recommend an AC service every 2 years. As ARC Licensed technicians (RTA: AU54941), we ensure your system is free of leaks and correctly regassed for optimal performance."
+                q: "Why is my check engine light on?",
+                a: "A check engine light can indicate anything from a loose fuel cap to a more serious engine or emissions issue. Our advanced diagnostic equipment allows us to accurately identify the cause and recommend the right repair, helping you avoid unnecessary costs."
               },
               {
-                q: "Do you provide transparent quotes before starting any work?",
-                a: "Yes, honesty is our policy. We provide clear, upfront quotes for all repairs and servicing. We will always contact you for approval before performing any additional work found during an inspection."
+                q: "How do I know when my car needs servicing?",
+                a: "Most vehicles should be serviced every 10,000\u201315,000 km or every 6\u201312 months, depending on the manufacturer's recommendations and your driving conditions. Regular servicing helps improve safety, fuel efficiency and reliability while reducing the risk of expensive repairs."
               },
               {
-                q: "Are you experienced with European car brands like BMW and Audi?",
-                a: "Yes, we service all makes and models, including European luxury brands. We use advanced diagnostic equipment and high-quality parts to maintain the performance and reliability of your vehicle."
+                q: "Why choose Yadav Motors in Werribee?",
+                a: "Yadav Motors is a trusted local mechanic in Werribee, known for honest advice, transparent pricing and quality workmanship. We offer logbook servicing, diagnostics, brake repairs, air conditioning, suspension, tyres, batteries and general mechanical repairs. With over 160 five-star Google reviews, we're committed to providing reliable service and excellent customer care."
               }
             ].map((faq, i) => (
               <FadeIn key={i} delay={i * 100}>

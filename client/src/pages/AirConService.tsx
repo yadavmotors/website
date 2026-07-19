@@ -92,9 +92,11 @@ export default function AirConService() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { q: "How often should I service my car's air conditioning?", a: "We recommend an AC service every 2 years to ensure the system is free of leaks and the refrigerant levels are optimal. Regular servicing prevents expensive compressor failures." },
-                    { q: "Why is my car air conditioning blowing warm air?", a: "This is usually due to low refrigerant levels caused by a small leak, or a faulty compressor. As ARC Licensed technicians, we can accurately diagnose the leak and regas your system." },
-                    { q: "Does a car AC service include a cabin filter change?", a: "Yes, we always check the cabin filter. A clogged filter reduces airflow and can cause unpleasant odors. Replacing it ensures you're breathing clean air." },
+                    { q: "Why isn't my car air conditioner cold?", a: "The most common reason is low refrigerant due to a leak in the system. Other causes include a faulty compressor, a blocked condenser, or a broken blend door actuator. As ARC Licensed technicians (RTA: AU54941), we use specialised equipment to pinpoint the exact issue and get your AC blowing cold again." },
+                    { q: "How often should I service my car's air conditioning?", a: "We recommend an AC service every 2 years to maintain optimal cooling performance and prevent expensive compressor failures. Regular servicing also helps identify small leaks before they become major repairs." },
+                    { q: "How much does a car AC regas cost?", a: "The cost of a regas depends on your vehicle type and the refrigerant required. We provide transparent quotes before any work begins. If there's a leak, we'll identify and repair it first to ensure the regas lasts." },
+                    { q: "Does a car AC service include a cabin filter change?", a: "Yes, we always check the cabin filter during an AC service. A clogged filter reduces airflow and can cause unpleasant odors. Replacing it ensures you're breathing clean, fresh air inside your vehicle." },
+                    { q: "Can you service the AC on all car brands?", a: "Yes. We service air conditioning systems on all makes and models, including Toyota, Mazda, Hyundai, BMW, Mercedes-Benz, and more. Our ARC licence covers all vehicle types." },
                   ].map((faq, i) => (
                     <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
                       <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>

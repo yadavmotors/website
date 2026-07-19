@@ -99,9 +99,11 @@ export default function BrakeClutchService() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { q: "How often should I have my brakes checked?", a: "We recommend a brake inspection at least once a year or every 15,000km. However, if you notice any squealing, vibrations, or a change in braking performance, you should have them checked immediately." },
-                    { q: "How long does a brake pad replacement take?", a: "A standard brake pad replacement typically takes between 1 to 2 hours per axle. We offer same-day service for most brake repairs to get you back on the road quickly." },
-                    { q: "My clutch is slipping. Does it need a full replacement?", a: "Not necessarily. Sometimes it's a hydraulic issue or needs a simple adjustment. We'll perform a thorough diagnostic to find the root cause and provide the most cost-effective solution." },
+                    { q: "How long do brake pads last?", a: "Brake pads typically last between 30,000 to 70,000 km depending on your driving style, vehicle type, and road conditions. City driving with frequent stop-start traffic tends to wear pads faster. We recommend regular inspections to catch wear early and avoid damage to rotors." },
+                    { q: "How do I know if my brakes need replacing?", a: "Common signs include squealing or grinding noises, a vibrating brake pedal, the car pulling to one side when braking, or a longer stopping distance. If you notice any of these, book an inspection immediately for your safety." },
+                    { q: "How long does a brake pad replacement take?", a: "A standard brake pad replacement typically takes between 1 to 2 hours per axle. We offer same-day service for most brake repairs at Yadav Motors in Werribee to get you back on the road quickly." },
+                    { q: "My clutch is slipping. Does it need a full replacement?", a: "Not necessarily. Sometimes it's a hydraulic issue or needs a simple adjustment. We'll perform a thorough diagnostic to find the root cause and provide the most cost-effective solution before recommending a full replacement." },
+                    { q: "How much does a brake service cost in Werribee?", a: "The cost depends on whether you need pads only, pads and rotors, or a full brake system overhaul. We provide transparent, upfront quotes before any work begins. Call us on 0430 869 699 for a free estimate." },
                   ].map((faq, i) => (
                     <div key={i} className="bg-gray-50 p-5 rounded-lg border border-gray-100">
                       <h4 className="font-bold text-brand-navy mb-2">Q: {faq.q}</h4>
