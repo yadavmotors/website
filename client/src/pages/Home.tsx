@@ -498,23 +498,25 @@ export default function Home() {
       <section className="bg-white py-12 border-b border-gray-100">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <div className="flex flex-col items-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div className="flex flex-col items-center transition-all duration-300">
               <img src="/logos/accreditation/vacc.jpg" alt="VACC Member" className="h-12 w-auto mb-2" />
               <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">VACC Member</span>
             </div>
-            <div className="flex flex-col items-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div className="flex flex-col items-center transition-all duration-300">
               <img src="/logos/accreditation/arc.png" alt="ARC Licensed" className="h-12 w-auto mb-2" />
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">ARC Licensed</span>
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold text-center">
+                ARC Licensed<br />AU54941
+              </span>
             </div>
-            <div className="flex flex-col items-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div className="flex flex-col items-center transition-all duration-300">
               <img src="/logos/accreditation/tat.jpg" alt="TAT Member" className="h-12 w-auto mb-2" />
               <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">TAT Member</span>
             </div>
-            <div className="flex flex-col items-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div className="flex flex-col items-center transition-all duration-300">
               <img src="/logos/accreditation/capricorn.png" alt="Capricorn Member" className="h-12 w-auto mb-2" />
               <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Capricorn Member</span>
             </div>
-            <div className="flex flex-col items-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div className="flex flex-col items-center transition-all duration-300">
               <div className="h-12 w-12 rounded-full border-2 border-brand-navy flex items-center justify-center mb-2">
                 <Shield size={24} className="text-brand-navy" />
               </div>
