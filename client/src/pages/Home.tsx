@@ -61,6 +61,7 @@ const services = [
   { icon: <Wrench size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, fluid changes, and clutch replacement." },
   { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, and electrical repairs." },
   { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics, engine repairs, and timing belt replacement carried out to manufacturer standards." },
+  { icon: <Shield size={28} />, title: "Windscreen & ADAS Calibration", desc: "Expert windscreen replacement and precise ADAS camera calibration to ensure your safety systems work perfectly." },
   { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
 ];
 
@@ -1043,7 +1044,7 @@ export default function Home() {
               { src: "/images/workshop/vacc-event-team.jpeg", alt: "Yadav Motors team at VACC event", title: "Proud VACC Members" },
               { src: "/images/workshop/brake-service.jpg", alt: "Brake repair and maintenance service at Yadav Motors", title: "Precision Brake Repairs" },
               { src: "/images/workshop/workshop-view.jpg", alt: "A view of the busy Yadav Motors workshop in Werribee", title: "Modern Facilities" },
-              { src: "/images/workshop/van-windscreen-2.jpg", alt: "Vehicle maintenance and specialized repairs", title: "All Makes & Models" },
+              { src: "/images/workshop/van-windscreen-2.jpg", alt: "Toyota Hiace van receiving windscreen replacement and ADAS calibration at Yadav Motors", title: "Windscreen & ADAS Calibration" },
               { src: "/images/workshop/car-on-hoist.jpg", alt: "Car on hoist for full underbody inspection", title: "Comprehensive Inspections" },
             ].map((img, i) => (
               <FadeIn key={i} delay={i * 100}>
