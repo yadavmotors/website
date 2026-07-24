@@ -16,10 +16,10 @@ import { SITE_DATA } from "@/lib/constants";
 
 
 // Asset URLs
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-hero-YWBsshsFWNgTCVje28g9o5.webp";
-const MECHANIC_IMG = "/manus-storage/ChatGPTImageMay12,2026,03_41_39PM_a7855646.png";
-const DIAGNOSTICS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-diagnostics-GWZWBGuPpfpVpHmet5Fb5o.webp";
-const SUBURB_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663486097900/CbJHvBjvzNsnEFBJN8X7yM/yadav-werribee-suburb-Br4Adqdyum6gssNdDFED8j.webp";
+const HERO_IMG = "/images/workshop/workshop-view.jpg";
+const MECHANIC_IMG = "/images/workshop/vacc-event.jpg";
+const DIAGNOSTICS_IMG = "/images/workshop/wheel-alignment-screen.jpg";
+const SUBURB_IMG = "/images/workshop/car-on-hoist.jpg";
 
 // Fade-in on scroll hook
 function useFadeIn() {
@@ -233,7 +233,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src={MECHANIC_IMG}
-                  alt="Rama Krishna, founder of Yadav Motors, a trusted local mechanic in Werribee providing expert car repairs and logbook servicing."
+                  alt="Rama Krishna and the Yadav Motors team at a VACC event, showcasing their commitment to professional automotive standards in Werribee."
                   className="rounded-lg shadow-xl w-full max-w-md mx-auto lg:mx-0 object-cover"
                   style={{ maxHeight: "520px" }}
                 />
@@ -1014,6 +1014,52 @@ export default function Home() {
               <strong>Free pick-up & drop-off available within 10km of our workshop.</strong> Call us to discuss your location.
             </p>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── WORKSHOP GALLERY ─── */}
+      <section className="section-white py-16 lg:py-24 overflow-hidden">
+        <div className="container">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <p
+                className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                Inside the Workshop
+              </p>
+              <h2
+                className="text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-navy"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                REAL WORK, REAL RESULTS.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { src: "/images/workshop/tesla-service-1.jpg", alt: "Tesla Model 3 being serviced at Yadav Motors Werribee", title: "EV & Hybrid Specialist" },
+              { src: "/images/workshop/award-ceremony.jpg", alt: "Rama Krishna receiving an automotive excellence award", title: "Award-Winning Service" },
+              { src: "/images/workshop/brake-service.jpg", alt: "Brake repair and maintenance service at Yadav Motors", title: "Precision Brake Repairs" },
+              { src: "/images/workshop/workshop-view.jpg", alt: "A view of the busy Yadav Motors workshop in Werribee", title: "Modern Facilities" },
+              { src: "/images/workshop/van-windscreen-2.jpg", alt: "Vehicle maintenance and specialized repairs", title: "All Makes & Models" },
+              { src: "/images/workshop/car-on-hoist.jpg", alt: "Car on hoist for full underbody inspection", title: "Comprehensive Inspections" },
+            ].map((img, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <div className="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-lg" style={{ fontFamily: "'Oswald', sans-serif" }}>{img.title}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
