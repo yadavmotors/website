@@ -17,7 +17,7 @@ import { SITE_DATA } from "@/lib/constants";
 
 // Asset URLs
 const HERO_IMG = "/images/workshop/workshop-view.jpg";
-const MECHANIC_IMG = "/images/workshop/vacc-event.jpg";
+const MECHANIC_IMG = "/images/workshop/vacc-event-team.jpeg";
 const DIAGNOSTICS_IMG = "/images/workshop/wheel-alignment-screen.jpg";
 const SUBURB_IMG = "/images/workshop/car-on-hoist.jpg";
 
@@ -1040,7 +1040,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { src: "/images/workshop/tesla-service-1.jpg", alt: "Tesla Model 3 being serviced at Yadav Motors Werribee", title: "EV & Hybrid Specialist" },
-              { src: "/images/workshop/award-ceremony.jpg", alt: "Rama Krishna receiving an automotive excellence award", title: "Award-Winning Service" },
+              { src: "/images/workshop/vacc-event-team.jpeg", alt: "Yadav Motors team at VACC event", title: "Proud VACC Members" },
               { src: "/images/workshop/brake-service.jpg", alt: "Brake repair and maintenance service at Yadav Motors", title: "Precision Brake Repairs" },
               { src: "/images/workshop/workshop-view.jpg", alt: "A view of the busy Yadav Motors workshop in Werribee", title: "Modern Facilities" },
               { src: "/images/workshop/van-windscreen-2.jpg", alt: "Vehicle maintenance and specialized repairs", title: "All Makes & Models" },
