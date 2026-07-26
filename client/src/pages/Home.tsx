@@ -495,32 +495,48 @@ export default function Home() {
       </section>
 
       {/* ─── ACCREDITATIONS ─── */}
-      <section className="bg-white py-12 border-b border-gray-100">
+      <section className="bg-white py-16 border-b border-gray-100">
         <div className="container">
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <div className="flex flex-col items-center transition-all duration-300">
-              <img src="/logos/accreditation/vacc.jpg" alt="VACC Member" className="h-12 w-auto mb-2" />
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">VACC Member</span>
+          <FadeIn>
+            <div className="text-center mb-10">
+              <p className="text-brand-red font-semibold uppercase tracking-widest text-xs mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Certified Excellence</p>
+              <h3 className="text-2xl font-bold text-brand-navy" style={{ fontFamily: "'Oswald', sans-serif" }}>PROFESSIONAL ACCREDITATIONS</h3>
             </div>
-            <div className="flex flex-col items-center transition-all duration-300">
-              <img src="/logos/accreditation/arc.png" alt="ARC Licensed" className="h-12 w-auto mb-2" />
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold text-center">
+          </FadeIn>
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <img src="/logos/accreditation/vacc.jpg" alt="VACC Member - Yadav Motors Werribee" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+              </div>
+              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">VACC Member</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <img src="/logos/accreditation/arc.png" alt="ARC Licensed AU54941 - Air Conditioning Specialist" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+              </div>
+              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold text-center group-hover:text-brand-navy transition-colors">
                 ARC Licensed<br />AU54941
               </span>
             </div>
-            <div className="flex flex-col items-center transition-all duration-300">
-              <img src="/logos/accreditation/tat.jpg" alt="TAT Member" className="h-12 w-auto mb-2" />
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">TAT Member</span>
-            </div>
-            <div className="flex flex-col items-center transition-all duration-300">
-              <img src="/logos/accreditation/capricorn.png" alt="Capricorn Member" className="h-12 w-auto mb-2" />
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Capricorn Member</span>
-            </div>
-            <div className="flex flex-col items-center transition-all duration-300">
-              <div className="h-12 w-12 rounded-full border-2 border-brand-navy flex items-center justify-center mb-2">
-                <Shield size={24} className="text-brand-navy" />
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <img src="/logos/accreditation/tat.jpg" alt="TAT Member - The Automotive Technician" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
               </div>
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Fully Insured</span>
+              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">TAT Member</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <img src="/logos/accreditation/capricorn.png" alt="Capricorn Preferred Supplier" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+              </div>
+              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">Capricorn Member</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <div className="h-16 w-16 rounded-full border-2 border-gray-200 group-hover:border-brand-navy flex items-center justify-center transition-colors">
+                  <Shield size={32} className="text-gray-300 group-hover:text-brand-navy transition-colors" />
+                </div>
+              </div>
+              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">Fully Insured</span>
             </div>
           </div>
         </div>
