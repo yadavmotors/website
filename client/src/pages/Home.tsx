@@ -234,7 +234,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src={MECHANIC_IMG}
-                  alt="Rama Krishna and the Yadav Motors team at a VACC event, showcasing their commitment to professional automotive standards in Werribee."
+                  alt="Rama Krishna and Rajashekar with Bev McArthur MP, Shadow Minister for Small Business Victoria"
                   className="rounded-lg shadow-xl w-full max-w-md mx-auto lg:mx-0 object-cover"
                   style={{ maxHeight: "520px" }}
                 />
@@ -249,11 +249,11 @@ export default function Home() {
                       className="text-brand-navy font-bold text-sm"
                       style={{ fontFamily: "'Oswald', sans-serif" }}
                     >
-                      Qualified Automotive Technician
+                      Community & Industry Leadership
                     </span>
                   </div>
                   <p className="text-gray-600 text-xs leading-snug">
-                    Diploma of Automotive Technology · Cert IV Automotive Mechanical · EV Servicing Certified
+                    Rama Krishna and Rajashekar with Bev McArthur MP, Shadow Minister for Small Business Victoria
                   </p>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
               { icon: <Star size={24} className="text-yellow-400" />, value: `${SITE_DATA.googleReviews.rating} Stars`, label: "Google Rating" },
-              { icon: <Users size={24} className="text-yellow-400" />, value: "3,250+", label: "Customers Served" },
+              { icon: <Users size={24} className="text-yellow-400" />, value: "3,261+", label: "Customers Served" },
               { icon: <Award size={24} className="text-yellow-400" />, value: SITE_DATA.googleReviews.displayCount, label: "5-Star Reviews" },
               { icon: <Clock size={24} className="text-yellow-400" />, value: `${SITE_DATA.experience.years} Years`, label: "Serving Werribee" },
             ].map((stat, i) => (
@@ -506,37 +506,37 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/vacc.jpg" alt="VACC Member - Yadav Motors Werribee" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+                <img src="/logos/accreditation/vacc.jpg" alt="VACC Member - Yadav Motors Werribee" className="max-h-full w-auto transition-all duration-300" />
               </div>
-              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">VACC Member</span>
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">VACC Member</span>
             </div>
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/arc.png" alt="ARC Licensed AU54941 - Air Conditioning Specialist" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+                <img src="/logos/accreditation/arc.png" alt="ARC Licensed AU54941 - Air Conditioning Specialist" className="max-h-full w-auto transition-all duration-300" />
               </div>
-              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold text-center group-hover:text-brand-navy transition-colors">
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold text-center">
                 ARC Licensed<br />AU54941
               </span>
             </div>
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/tat.jpg" alt="TAT Member - The Automotive Technician" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+                <img src="/logos/accreditation/tat.jpg" alt="TAT Member - The Automotive Technician" className="max-h-full w-auto transition-all duration-300" />
               </div>
-              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">TAT Member</span>
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">TAT Member</span>
             </div>
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/capricorn.png" alt="Capricorn Preferred Supplier" className="max-h-full w-auto grayscale group-hover:grayscale-0 transition-all duration-300" />
+                <img src="/logos/accreditation/capricorn.png" alt="Capricorn Preferred Supplier" className="max-h-full w-auto transition-all duration-300" />
               </div>
-              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">Capricorn Member</span>
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">Capricorn Member</span>
             </div>
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
-                <div className="h-16 w-16 rounded-full border-2 border-gray-200 group-hover:border-brand-navy flex items-center justify-center transition-colors">
-                  <Shield size={32} className="text-gray-300 group-hover:text-brand-navy transition-colors" />
+                <div className="h-16 w-16 rounded-full border-2 border-brand-navy flex items-center justify-center transition-colors">
+                  <Shield size={32} className="text-brand-navy transition-colors" />
                 </div>
               </div>
-              <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold group-hover:text-brand-navy transition-colors">Fully Insured</span>
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">Fully Insured</span>
             </div>
           </div>
         </div>
@@ -1055,7 +1055,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { src: "/images/workshop/tesla-service-1.jpg", alt: "Tesla Model 3 being serviced at Yadav Motors Werribee", title: "EV & Hybrid Specialist" },
+              { src: "/images/workshop/tesla-service-1.jpg", alt: "Tesla Model 3 being serviced at Yadav Motors Werribee", title: "Servicing EV & Hybrid" },
               { src: "/images/workshop/vacc-event-team.jpeg", alt: "Yadav Motors team at VACC event", title: "Proud VACC Members" },
               { src: "/images/workshop/brake-service.jpg", alt: "Brake repair and maintenance service at Yadav Motors", title: "Precision Brake Repairs" },
               { src: "/images/workshop/workshop-view.jpg", alt: "A view of the busy Yadav Motors workshop in Werribee", title: "Modern Facilities" },
