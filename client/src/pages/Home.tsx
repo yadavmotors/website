@@ -503,12 +503,20 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-brand-navy" style={{ fontFamily: "'Oswald', sans-serif" }}>PROFESSIONAL ACCREDITATIONS</h3>
             </div>
           </FadeIn>
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
                 <img src="/logos/accreditation/vacc.jpg" alt="VACC Member - Yadav Motors Werribee" className="max-h-full w-auto transition-all duration-300" />
               </div>
               <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">VACC Member</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="h-20 flex items-center justify-center mb-3">
+                <img src="/logos/accreditation/aasra.png" alt="AASRA Member - Australian Automotive Service and Repair Authority" className="max-h-full w-auto transition-all duration-300" />
+              </div>
+              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold text-center">
+                AASRA<br />Member
+              </span>
             </div>
             <div className="flex flex-col items-center group">
               <div className="h-20 flex items-center justify-center mb-3">
