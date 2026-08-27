@@ -6,9 +6,9 @@
 export const SITE_DATA = {
   // Google Review Stats
   googleReviews: {
-    count: 180,
+    count: 194,
     rating: 4.9,
-    displayCount: "180+", // Used for "180+ Reviews" labels
+    displayCount: "194+", // Used for "194+ Reviews" labels
   },
   
   // Experience
