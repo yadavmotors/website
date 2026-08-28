@@ -61,7 +61,7 @@ const services = [
   { icon: <Wrench size={28} />, title: "Transmission Service", desc: "Automatic and manual transmission servicing, repairs, fluid changes, and clutch replacement." },
   { icon: <Wrench size={28} />, title: "Auto Electrical", desc: "Fault diagnosis, battery testing, and electrical repairs." },
   { icon: <Shield size={28} />, title: "Engine & Diagnostics", desc: "Advanced scan-tool diagnostics, engine repairs, and timing belt replacement carried out to manufacturer standards." },
-  { icon: <Shield size={28} />, title: "Windscreen & ADAS Calibration", desc: "Expert windscreen replacement and precise ADAS camera calibration to ensure your safety systems work perfectly." },
+  { icon: <Shield size={28} />, title: "Windscreen & Basic ADAS", desc: "Windscreen replacement and basic ADAS camera calibration support, where applicable, to help keep your vehicle's safety systems working correctly." },
   { icon: <Clock size={28} />, title: "Free Pick-Up & Drop-Off", desc: "We come to you. Minimise your downtime with our convenient pick-up and drop-off service. **Within 10km of workshop." },
 ];
 
@@ -652,6 +652,45 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── WINDSCREEN & BASIC ADAS ─── */}
+      <section id="windscreen-adas" className="section-navy py-16 lg:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <FadeIn>
+              <div className="overflow-hidden rounded-xl shadow-2xl border border-white/10">
+                <img
+                  src="/images/workshop/windscreen-adas-service.webp"
+                  alt="Yadav Motors technician replacing a windscreen in Werribee"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  width="1800"
+                  height="1350"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <p className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                Windscreen Safety Support
+              </p>
+              <h2 className="text-white text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-5" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                WINDSCREEN REPLACEMENT &amp; BASIC ADAS
+              </h2>
+              <p className="text-white/80 text-lg leading-relaxed mb-5">
+                A windscreen is part of your vehicle’s safety system. We replace windscreens and provide basic ADAS camera calibration support where applicable, helping you get back on the road with confidence.
+              </p>
+              <p className="text-white/65 leading-relaxed mb-8">
+                Our team can discuss your vehicle’s requirements, check whether calibration is needed after replacement, and explain the next steps clearly before work begins. Contact Yadav Motors in Werribee to arrange an assessment.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/book" className="btn-primary text-center">Book This Service</Link>
+                <a href="tel:0430869699" className="btn-secondary text-center">Call 0430 869 699</a>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
