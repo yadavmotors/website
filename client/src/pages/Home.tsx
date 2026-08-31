@@ -503,48 +503,38 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-brand-navy" style={{ fontFamily: "'Oswald', sans-serif" }}>PROFESSIONAL ACCREDITATIONS</h3>
             </div>
           </FadeIn>
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/vacc.jpg" alt="VACC Member - Yadav Motors Werribee" className="max-h-full w-auto transition-all duration-300" />
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">VACC Member</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/aasra.png" alt="AASRA Member - Australian Automotive Service and Repair Authority" className="max-h-full w-auto transition-all duration-300" />
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold text-center">
-                AASRA<br />Member
-              </span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/arc.png" alt="ARC Licensed AU54941 - Air Conditioning Specialist" className="max-h-full w-auto transition-all duration-300" />
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold text-center">
-                ARC Licensed<br />AU54941
-              </span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/tat.jpg" alt="TAT Member - The Automotive Technician" className="max-h-full w-auto transition-all duration-300" />
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">TAT Member</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <img src="/logos/accreditation/capricorn.png" alt="Capricorn Preferred Supplier" className="max-h-full w-auto transition-all duration-300" />
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">Capricorn Member</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <div className="h-20 flex items-center justify-center mb-3">
-                <div className="h-16 w-16 rounded-full border-2 border-brand-navy flex items-center justify-center transition-colors">
-                  <Shield size={32} className="text-brand-navy transition-colors" />
+          <style>{`
+            @keyframes accreditation-marquee {
+              from { transform: translateX(0); }
+              to { transform: translateX(-50%); }
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .accreditation-marquee-track { animation-play-state: paused !important; }
+            }
+          `}</style>
+          <div className="relative overflow-hidden" aria-label="Yadav Motors professional accreditations">
+            <div className="accreditation-marquee-track flex w-max items-start gap-6 md:gap-10" style={{ animation: "accreditation-marquee 32s linear infinite" }}>
+              {[...Array(2)].flatMap((_, copy) => [
+                { src: "/logos/accreditation/vacc.jpg", alt: "VACC Member - Yadav Motors Werribee", label: "VACC Member" },
+                { src: "/logos/accreditation/aasra.png", alt: "AASRA Member - Australian Automotive Service and Repair Authority", label: "AASRA Member" },
+                { src: "/logos/accreditation/arc.png", alt: "ARC Licensed AU54941 - Air Conditioning Specialist", label: "ARC Licensed AU54941" },
+                { src: "/logos/accreditation/tat.jpg", alt: "TAT Member - The Automotive Technician", label: "TAT Member" },
+                { src: "/logos/accreditation/capricorn.png", alt: "Capricorn Member", label: "Capricorn Member" },
+                { src: null, alt: "Fully Insured", label: "Fully Insured" },
+              ].map((logo, index) => (
+                <div key={`${copy}-${index}`} className="flex w-44 flex-shrink-0 flex-col items-center">
+                  <div className="flex h-24 w-44 items-center justify-center rounded-lg border border-gray-100 bg-white p-3 shadow-sm">
+                    {logo.src ? (
+                      <img src={logo.src} alt={logo.alt} className="max-h-20 max-w-[160px] w-auto object-contain" loading="lazy" decoding="async" />
+                    ) : (
+                      <div className="h-16 w-16 rounded-full border-2 border-brand-navy flex items-center justify-center">
+                        <Shield size={32} className="text-brand-navy" />
+                      </div>
+                    )}
+                  </div>
+                  <span className="mt-3 text-center text-[11px] uppercase tracking-widest text-brand-navy font-bold">{logo.label}</span>
                 </div>
-              </div>
-              <span className="text-[11px] uppercase tracking-widest text-brand-navy font-bold">Fully Insured</span>
+              )))}
             </div>
           </div>
         </div>
@@ -1005,68 +995,10 @@ export default function Home() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                suburb: "Werribee",
-                postcode: "3030",
-                desc: "Central Werribee's trusted local workshop for all mechanical repairs and logbook servicing.",
-              },
-              {
-                suburb: "Hoppers Crossing",
-                postcode: "3029",
-                desc: "Expert car diagnostics and repairs for Hoppers Crossing residents, just a short drive away.",
-              },
-              {
-                suburb: "Tarneit",
-                postcode: "3029",
-                desc: "Reliable car servicing and quality workmanship for the growing Tarneit community.",
-              },
-              {
-                suburb: "Point Cook",
-                postcode: "3030",
-                desc: "Dealer-level expertise for Point Cook families without the expensive dealership price tag.",
-              },
-              {
-                suburb: "Wyndham Vale",
-                postcode: "3024",
-                desc: "Professional auto repairs and maintenance services for all vehicle makes in Wyndham Vale.",
-              },
-              {
-                suburb: "Truganina",
-                postcode: "3029",
-                desc: "Quality mechanical solutions and honest advice for car owners in the Truganina area.",
-              },
-              {
-                suburb: "Laverton",
-                postcode: "3028",
-                desc: "Expert automotive care and transparent pricing for the Laverton local community.",
-              },
-              {
-                suburb: "Mambourin",
-                postcode: "3024",
-                desc: "Dependable car servicing and repairs for Mambourin residents at our nearby workshop.",
-              },
-              {
-                suburb: "Manor Lakes",
-                postcode: "3024",
-                desc: "Comprehensive vehicle maintenance and repairs for families living in Manor Lakes.",
-              },
-              {
-                suburb: "Little River",
-                postcode: "3211",
-                desc: "Trusted automotive expertise for Little River residents seeking reliable local service.",
-              },
-            ].map((area, i) => (
-              <FadeIn key={area.suburb} delay={i * 80}>
-                <div className="bg-gradient-to-br from-brand-navy to-blue-900 rounded-lg p-6 text-white shadow-md hover:shadow-lg transition-shadow">
-                  <h3
-                    className="text-xl font-bold mb-1"
-                    style={{ fontFamily: "'Oswald', sans-serif" }}
-                  >
-                    {area.suburb}
-                  </h3>
-                  <p className="text-brand-red font-semibold text-sm mb-3">({area.postcode})</p>
-                  <p className="text-white/80 text-sm leading-relaxed">{area.desc}</p>
+            {["Werribee", "Hoppers Crossing", "Tarneit", "Point Cook", "Wyndham Vale", "Truganina", "Laverton", "Mambourin", "Manor Lakes", "Little River"].map((suburb, i) => (
+              <FadeIn key={suburb} delay={i * 60}>
+                <div className="rounded-lg bg-gradient-to-br from-brand-navy to-blue-900 px-5 py-4 text-center text-white shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-bold" style={{ fontFamily: "'Oswald', sans-serif" }}>{suburb}</h3>
                 </div>
               </FadeIn>
             ))}
