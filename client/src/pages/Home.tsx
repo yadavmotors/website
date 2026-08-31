@@ -1242,6 +1242,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── CAREERS ─── */}
+      <section id="careers" className="section-white py-16 lg:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+            <FadeIn className="lg:col-span-2">
+              <div className="rounded-xl p-8 text-white shadow-lg" style={{ background: "linear-gradient(145deg, #0F2260 0%, #1A3A8F 100%)" }}>
+                <p className="text-red-300 font-semibold uppercase tracking-widest text-sm mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Join Our Team</p>
+                <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-5" style={{ fontFamily: "'Oswald', sans-serif" }}>BUILD YOUR FUTURE WITH YADAV MOTORS.</h2>
+                <p className="text-white/80 leading-relaxed mb-7">Join a respected local workshop where quality workmanship, honest advice, and great customer care come first.</p>
+                <div className="space-y-4 text-sm text-white/85">
+                  <div className="flex items-center gap-3"><Wrench size={19} className="text-red-300 flex-shrink-0" /><span>Werribee-based workshop</span></div>
+                  <div className="flex items-center gap-3"><Users size={19} className="text-red-300 flex-shrink-0" /><span>Supportive, customer-focused team</span></div>
+                  <div className="flex items-center gap-3"><Award size={19} className="text-red-300 flex-shrink-0" /><span>Work across modern and conventional vehicles</span></div>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={150} className="lg:col-span-3">
+              <p className="text-brand-red font-semibold uppercase tracking-widest text-sm mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Career Opportunity</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>EXPERIENCED AUTOMOTIVE TECHNICIAN</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">Yadav Motors is looking for an experienced Automotive Technician to join our Werribee workshop. This is an opportunity to contribute to a trusted local business while working on a broad range of makes and models, including modern electric and hybrid vehicles.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-7">
+                <div className="rounded-lg bg-gray-50 border border-gray-100 p-5">
+                  <h3 className="text-brand-navy font-bold mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>WHAT YOU’LL DO</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Carry out servicing, inspections, diagnostics, mechanical repairs, brake and transmission work, auto electrical checks, and vehicle safety-related service tasks to a high standard.</p>
+                </div>
+                <div className="rounded-lg bg-gray-50 border border-gray-100 p-5">
+                  <h3 className="text-brand-navy font-bold mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>WHAT WE’RE LOOKING FOR</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Relevant automotive qualifications and practical workshop experience, strong diagnostic skills, attention to detail, reliability, and a professional approach to customers and teammates.</p>
+                </div>
+              </div>
+              <div className="rounded-lg border-l-4 border-brand-red bg-red-50 p-5 mb-7">
+                <p className="text-brand-navy font-semibold mb-1">Interested in joining us?</p>
+                <p className="text-gray-600 text-sm">Send your resume and a brief introduction to <a href="mailto:info@yadavmotors.com.au?subject=Automotive%20Technician%20Application" className="text-brand-navy font-semibold underline hover:text-brand-red">info@yadavmotors.com.au</a> or call <a href="tel:0430869699" className="text-brand-navy font-semibold hover:text-brand-red">0430 869 699</a>.</p>
+              </div>
+              <a href="mailto:info@yadavmotors.com.au?subject=Automotive%20Technician%20Application" className="btn-primary inline-block">Apply by Email</a>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* ─── FINAL CTA ─── */}
       <section className="section-dark py-16 lg:py-24">
         <div className="container text-center">
