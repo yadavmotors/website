@@ -939,7 +939,7 @@ export default function Home() {
               },
               {
                 q: "Why choose Yadav Motors in Werribee?",
-                a: "Yadav Motors is a trusted local mechanic in Werribee, known for honest advice, transparent pricing and quality workmanship. We offer logbook servicing, diagnostics, brake repairs, air conditioning, suspension, tyres, batteries and general mechanical repairs. With over 160 five-star Google reviews, we're committed to providing reliable service and excellent customer care."
+                a: "Yadav Motors is a trusted local mechanic in Werribee, known for honest advice, transparent pricing and quality workmanship. We offer logbook servicing, diagnostics, brake repairs, air conditioning, suspension, tyres, batteries and general mechanical repairs. With over 207 five-star Google reviews, we're committed to providing reliable service and excellent customer care."
               }
             ].map((faq, i) => (
               <FadeIn key={i} delay={i * 100}>
