@@ -1034,6 +1034,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { src: "/images/workshop/ev-hybrid-service-technician.webp", alt: "Yadav Motors technician servicing a Tesla electric vehicle with high-voltage safety equipment in Werribee", title: "EV & Hybrid Servicing" },
+              { src: "/images/workshop/ev-hybrid-safety-equipment.webp", alt: "EV and Hybrid high-voltage safety equipment at Yadav Motors Werribee", title: "High-Voltage Safety Equipment" },
+              { src: "/images/workshop/ev-hybrid-network-workshop.webp", alt: "EV and Hybrid Network certified workshop equipment at Yadav Motors Werribee", title: "EV & Hybrid Network Workshop" },
               { src: "/images/workshop/tesla-service-1.jpg", alt: "Tesla Model 3 being serviced at Yadav Motors Werribee", title: "Servicing EV & Hybrid" },
               { src: "/images/workshop/vacc-event-team.jpeg", alt: "Yadav Motors team at VACC event", title: "Proud VACC Members" },
               { src: "/images/workshop/brake-service.jpg", alt: "Brake repair and maintenance service at Yadav Motors", title: "Precision Brake Repairs" },
@@ -1047,6 +1050,10 @@ export default function Home() {
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                    width="1920"
+                    height="1440"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg" style={{ fontFamily: "'Oswald', sans-serif" }}>{img.title}</p>
