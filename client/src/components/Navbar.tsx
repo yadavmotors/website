@@ -74,14 +74,19 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={SITE_DATA.contact.phoneLink}
-              className="flex items-center gap-2 text-white font-semibold hover:text-yellow-300 transition-colors"
-              style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.1rem", letterSpacing: "0.05em" }}
-            >
-              <Phone size={18} />
-              {SITE_DATA.contact.phone}
-            </a>
+            <div className="flex flex-col items-end gap-0.5">
+              <a
+                href={SITE_DATA.contact.phoneLink}
+                className="flex items-center gap-2 text-white font-semibold hover:text-yellow-300 transition-colors"
+                style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.1rem", letterSpacing: "0.05em" }}
+              >
+                <Phone size={18} />
+                {SITE_DATA.contact.phone}
+              </a>
+              <a href={SITE_DATA.contact.alternatePhoneLink} className="text-white/75 text-xs hover:text-yellow-300 transition-colors">
+                {SITE_DATA.contact.alternatePhone}
+              </a>
+            </div>
             <Link href="/book" className="btn-primary text-sm py-2 px-5">
               Book Now
             </Link>
@@ -131,6 +136,13 @@ export default function Navbar() {
               >
                 <Phone size={18} />
                 {SITE_DATA.contact.phone}
+              </a>
+              <a
+                href={SITE_DATA.contact.alternatePhoneLink}
+                className="flex items-center gap-2 text-white/80 font-semibold py-2"
+              >
+                <Phone size={18} />
+                {SITE_DATA.contact.alternatePhone}
               </a>
               <Link
                 href="/book"

@@ -88,6 +88,15 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href={SITE_DATA.contact.alternatePhoneLink}
+                  className="flex items-start gap-2 text-white/70 hover:text-white text-sm transition-colors"
+                >
+                  <Phone size={15} className="mt-0.5 flex-shrink-0 text-yellow-400" />
+                  {SITE_DATA.contact.alternatePhone}
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:info@yadavmotors.com.au"
                   className="flex items-start gap-2 text-white/70 hover:text-white text-sm transition-colors"
                 >

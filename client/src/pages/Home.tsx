@@ -1120,6 +1120,14 @@ export default function Home() {
                     <Phone size={18} className="text-brand-red" />
                     0430 869 699
                   </a>
+                  <a
+                    href={SITE_DATA.contact.alternatePhoneLink}
+                    className="flex items-center gap-2 mt-1 text-gray-600 font-semibold hover:text-brand-red transition-colors"
+                    style={{ fontFamily: "'Oswald', sans-serif" }}
+                  >
+                    <Phone size={16} className="text-brand-red" />
+                    {SITE_DATA.contact.alternatePhone}
+                  </a>
                 </div>
 
                 <div>

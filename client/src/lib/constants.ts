@@ -21,6 +21,8 @@ export const SITE_DATA = {
   contact: {
     phone: "0430 869 699",
     phoneLink: "tel:0430869699",
+    alternatePhone: "03 7064 5073",
+    alternatePhoneLink: "tel:0370645073",
     email: "info@yadavmotors.com.au",
     address: "11/67-71 Russell St, Werribee VIC 3030",
     mapsLink: "https://maps.google.com/?q=11/67-71+Russell+St,+Werribee+VIC+3030",
